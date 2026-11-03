@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "git": {
+    "repository": "koopuluri/ghost",
+    "remote": "origin",
+    "branch": "main",
+    "visibility": "public"
+  },
+  "assets": {
+    "bucket": "ghost-private",
+    "enabled": true,
+    "budget_usd": 20,
+    "billing_policy": "private_guardrails_accepted",
+    "max_archive_bytes": 100000000000,
+    "max_upload_bytes": 10000000000,
+    "max_objects": 10000,
+    "max_requests_per_run": 5000
+  },
+  "site": {
+    "directory": "personal-site",
+    "project": "karthikuppu.com",
+    "scope": "homan-projects",
+    "inputs": [
+      "personal-site/**"
+    ],
+    "expected_url": "https://www.koopuluri.com",
+    "account": "homan",
+    "project_id": "prj_oQobkvUOSKGlPVgYlCIdvNLFYgtf"
+  }
+}

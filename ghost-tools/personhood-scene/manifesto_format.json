@@ -1,0 +1,9 @@
+{
+  "aspect_ratio": "4:3",
+  "width": 1280,
+  "height": 960,
+  "fps": 24,
+  "duration_seconds": 5,
+  "frame_start": 1,
+  "frame_end": 120
+}

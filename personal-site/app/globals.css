@@ -1,0 +1,362 @@
+@import "tailwindcss";
+
+/* ===========================================================================
+   Site styles for the landing page and internal video tools.
+
+   This is the single file to tweak for page-level look & feel. Reusable
+   components own their own CSS:
+     - Essay list item → components/EssayList.module.css
+     - Video inspector → components/VideoInspector.module.css
+   Those components still read the shared design tokens defined below.
+=========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   Design tokens (shared palette — components reference these too)
+--------------------------------------------------------------------------- */
+:root {
+  --background: #fdfdfc; /* barely-warm white */
+  --ink: #1c1c1a; /* body text — slightly less than black, feels natural */
+  --ink-strong: #0b0b0a; /* titles / emphasis — near black */
+  --caption: #a6a6a1; /* dates, secondary — soft "caption" gray */
+  --hairline: #ebebe7; /* faint dividers */
+  --viz-bg: #fbfbfa; /* visualization panel — near page-white, defined by its edge */
+  --viz-edge: #eeeeea; /* hairline that separates a viz panel from the page */
+  --code-bg: #f5f5f2;
+  --accent: #4b4b46;
+  /* Landing-page links. */
+  --link: #2563eb;
+  --link-underline: color-mix(in srgb, var(--link) 32%, transparent);
+  --corner-size: 48px;
+  --corner-margin: 24px;
+  --top-fade-height: 112px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-ink: var(--ink);
+  --color-ink-strong: var(--ink-strong);
+  --color-caption: var(--caption);
+  --color-hairline: var(--hairline);
+  --font-sans: var(--font-sans);
+}
+
+/* ---------------------------------------------------------------------------
+   Base typography — Inter variable, weight 420, one size for everything
+--------------------------------------------------------------------------- */
+html {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  font-size: 1rem; /* one size for the whole site — every single element */
+  font-weight: 435;
+  letter-spacing: -0.025em;
+  line-height: 1.5;
+}
+
+/* Nothing is bigger than anything else: headings inherit the base size.
+   Hierarchy comes only from weight and color. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+::selection {
+  background: #ecece4;
+}
+
+/* ---------------------------------------------------------------------------
+   Page shell — centered landing-page column
+--------------------------------------------------------------------------- */
+.page {
+  margin: 0 auto;
+  width: 100%;
+  /* 550px text column + 1.5rem padding each side (box-sizing: border-box). */
+  max-width: 600px;
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 7rem 1.5rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   "Cards being laid down" — subtle staggered entrance for page content.
+   Applied to a container; its direct children animate in one after another.
+--------------------------------------------------------------------------- */
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal > * {
+  opacity: 0;
+  animation: card-in 0.62s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.reveal > *:nth-child(1) {
+  animation-delay: 0.02s;
+}
+.reveal > *:nth-child(2) {
+  animation-delay: 0.09s;
+}
+.reveal > *:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.reveal > *:nth-child(4) {
+  animation-delay: 0.23s;
+}
+.reveal > *:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.reveal > *:nth-child(6) {
+  animation-delay: 0.37s;
+}
+.reveal > *:nth-child(7) {
+  animation-delay: 0.44s;
+}
+.reveal > *:nth-child(8) {
+  animation-delay: 0.51s;
+}
+.reveal > *:nth-child(9) {
+  animation-delay: 0.58s;
+}
+.reveal > *:nth-child(10) {
+  animation-delay: 0.65s;
+}
+.reveal > *:nth-child(n + 11) {
+  animation-delay: 0.72s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal > * {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Landing page
+--------------------------------------------------------------------------- */
+.landing {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.landing__photo {
+  width: 100%;
+  max-width: 100px;
+  aspect-ratio: 1 / 1; /* the box is always square... */
+}
+
+.landing__photo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%; /* ...so the inner fills a square, and 50% is a true circle */
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.landing__photo-inner img {
+  object-fit: cover;
+}
+
+.landing__name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.landing__name {
+  font-weight: 480;
+  color: var(--ink-strong);
+}
+
+.landing__divider {
+  width: 1px;
+  height: 1em;
+  background: var(--hairline);
+}
+
+.landing__x {
+  display: inline-flex;
+  align-items: center;
+  color: var(--caption);
+  transition: color 0.2s ease;
+}
+
+.landing__x:hover {
+  color: var(--ink-strong);
+}
+
+.landing__contact {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.landing__contact:hover {
+  text-decoration-color: var(--link);
+}
+
+/* ---------------------------------------------------------------------------
+   Essay page
+--------------------------------------------------------------------------- */
+.essay-title {
+  font-weight: 550;
+  color: var(--ink-strong);
+}
+
+.essay-date {
+  margin-top: 0.25rem;
+  color: var(--caption);
+}
+
+.essay-article {
+  margin-top: 2.5rem;
+}
+
+.essay-body {
+  color: var(--ink);
+}
+
+.essay-body > * + * {
+  margin-top: 1.15em;
+}
+
+.essay-body h1,
+.essay-body h2,
+.essay-body h3,
+.essay-body h4 {
+  margin-top: 3em;
+  color: var(--ink-strong);
+  font-weight: 550;
+}
+
+.essay-body strong {
+  color: var(--ink-strong);
+  font-weight: 550;
+}
+
+.essay-body a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.essay-body a:hover {
+  text-decoration-color: var(--link);
+}
+
+.essay-body ul,
+.essay-body ol {
+  padding-left: 1.25em;
+}
+
+.essay-body ul {
+  list-style: disc;
+}
+
+.essay-body ol {
+  list-style: decimal;
+}
+
+.essay-body li + li {
+  margin-top: 0.4em;
+}
+
+.essay-body blockquote {
+  padding-left: 1em;
+  border-left: 2px solid var(--hairline);
+  color: var(--accent);
+}
+
+.essay-body code {
+  padding: 0.1em 0.35em;
+  border-radius: 5px;
+  background: var(--code-bg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+}
+
+.essay-body hr {
+  margin: 3.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.top-fade {
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: var(--top-fade-height);
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    var(--background) 0%,
+    var(--background) 20%,
+    color-mix(in srgb, var(--background) 72%, transparent) 46%,
+    color-mix(in srgb, var(--background) 32%, transparent) 72%,
+    transparent 100%
+  );
+}
+
+.essay-page {
+  padding-top: calc(var(--top-fade-height) + 0.75rem);
+}
+
+@media (min-width: 640px) {
+  .essay-page {
+    padding-top: calc(var(--top-fade-height) + 2rem);
+  }
+}
+
+.home-corner {
+  position: fixed;
+  z-index: 50;
+  top: var(--corner-margin);
+  left: var(--corner-margin);
+  display: block;
+  width: var(--corner-size);
+  height: var(--corner-size);
+  border-radius: 9999px;
+}
+
+.home-corner__img {
+  display: block;
+  width: var(--corner-size);
+  height: var(--corner-size);
+  border-radius: 9999px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.home-corner:hover .home-corner__img {
+  transform: scale(1.05);
+}

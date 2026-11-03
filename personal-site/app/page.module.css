@@ -1,0 +1,31 @@
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: clamp(3rem, 11vh, 7rem) 28px 5rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.intro { margin: 0 0 2.5rem; }
+.stream { list-style: none; padding: 0; margin: 0; }
+.expression { padding: 3px 0; }
+.expression a {
+  color: #1155cc;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+.expression a:visited { color: #1155cc; }
+.expression a:hover { color: #0b3d91; }
+.expression a:focus-visible {
+  outline: 2px solid #1155cc;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+@media (max-width: 420px) {
+  .page { padding-inline: 24px; }
+}

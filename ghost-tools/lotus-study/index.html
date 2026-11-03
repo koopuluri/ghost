@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f4eb">
+  <title>Personhood — Lotus study</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21C1 17 1 8 3 5c6 1 9 8 9 16C23 17 23 8 21 5c-6 1-9 8-9 16C6 13 7 6 12 1c5 5 6 12 0 20' fill='none' stroke='%23b43175' stroke-width='1.5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header><a class="wordmark" href="./">π <span>/</span> PERSONHOOD</a><span class="study-label">MOTION STUDY · 10</span><button id="focus" aria-pressed="false">Hide controls <span>↗</span></button></header>
+  <main>
+    <div class="title-row"><div><p class="eyebrow">THE BLOSSOMING OF HUMAN POTENTIAL</p><h1>An unfolding.</h1></div><span class="format">1 : 1 <small>THE PERSONAL STACK</small></span></div>
+    <section aria-label="Personhood video composition">
+      <audio id="music" src="/media/announcement-music.wav?v=10" preload="auto"></audio>
+      <div id="stage" class="stage">
+        <video id="lotus" src="/media/lotus-square.mp4?v=10" poster="/media/lotus-poster.jpg?v=2" autoplay muted loop playsinline preload="auto" aria-label="A pink lotus blooming, cropped to a square"></video>
+        <canvas id="film" aria-hidden="true"></canvas>
+        <img id="stack-icons" src="./stack-icons.svg" alt="Heart, pi, dollar — personhood, personal artificial intelligence, personal stock" draggable="false">
+        <p id="error" hidden></p>
+      </div>
+      <div id="controls">
+        <div class="transport"><button id="play" aria-label="Play video">▷</button><input id="timeline" aria-label="Video timeline" type="range" min="0" max="1000" value="0"><output id="time">0:00 / 0:10</output><button id="restart" aria-label="Restart video" title="Restart">↺</button></div>
+        <div class="adjustments">
+          <label class="look-control" for="colorPop"><span>Color pop <output id="pop-label">84%</output></span><input id="colorPop" type="range" min="0" max="100" step="1" value="84"></label>
+          <label class="look-control" for="grain"><span>Film grain <output id="grain-label">91%</output></span><input id="grain" type="range" min="0" max="100" step="1" value="91"></label>
+          <label class="speed-control" for="speed">Playback <select id="speed"><option value="0.5">½ speed</option><option value="0.75">¾ speed</option><option value="1" selected>Original speed</option><option value="1.5">1½ speed</option></select></label>
+          <button id="reset">Reset</button>
+          <button id="export">Export video ↓</button>
+        </div>
+        <fieldset class="fade-controls">
+          <legend>The stack grows with you <output id="stack-visibility" aria-label="Stack visibility">0%</output></legend>
+          <div class="fade-grid">
+            <label for="fadeStart"><span>Fade starts <output id="fadeStart-label">2.0 s</output></span><input id="fadeStart" type="range" min="0" max="9.5" step=".1" value="2"></label>
+            <label for="fadeEnd"><span>Full white <output id="fadeEnd-label">10.0 s</output></span><input id="fadeEnd" type="range" min="2.5" max="10" step=".1" value="10"></label>
+            <label for="fadePower"><span>Acceleration <output id="fadePower-label">3.0</output></span><input id="fadePower" type="range" min="1" max="5" step=".1" value="3"></label>
+          </div>
+          <p>A higher acceleration keeps the symbols faint for longer.</p>
+        </fieldset>
+        <fieldset class="fade-controls music-controls">
+          <legend>Announcement Music <span>Santhosh Narayanan · 0:37–0:47</span></legend>
+          <div class="music-grid">
+            <button id="music-play">Play with music ↺</button>
+            <label for="musicFade"><span>Fade in <output id="musicFade-label">1.5 s</output></span><input id="musicFade" type="range" min="0" max="4" step=".1" value="1.5"></label>
+            <label for="musicVolume"><span>Volume <output id="musicVolume-label">100%</output></span><input id="musicVolume" type="range" min="0" max="100" step="1" value="100"></label>
+          </div>
+          <p>Enters at <span id="music-cue">0.0 s</span> · 10 s loop · no fade out. <span id="music-status" role="status">Press Play with music</span></p>
+        </fieldset>
+        <div class="caption"><span>Unfolding potential.</span><span id="status" role="status">Loading video…</span></div>
+      </div>
+    </section>
+    <footer><div><a href="https://www.youtube.com/watch?v=6prMmX7hqeU" target="_blank" rel="noopener noreferrer">Footage: “Blooming lotus flower” · banyan21 ↗</a><br><a href="https://music.youtube.com/watch?v=nJQG0dbNscQ" target="_blank" rel="noopener noreferrer">Music: “Announcement Music” · Santhosh Narayanan ↗</a></div><span><kbd>Space</kbd> play / pause <span class="separator">·</span> <kbd>H</kbd> hide controls</span></footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

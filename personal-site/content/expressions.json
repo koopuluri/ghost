@@ -1,0 +1,1165 @@
+{
+  "schemaVersion": 1,
+  "profileUrl": "https://x.com/koopuluri",
+  "lastSuccessfulCheck": "2026-10-13T00:42:24Z",
+  "coverage": {
+    "complete": false,
+    "method": "Signed-in Chrome browser: scrolled the Posts timeline to its loaded bottom, collected rendered post text, expansion controls, original publication times and video/GIF labels; opened qualifying candidates to read their own full text.",
+    "scope": "241 distinct profile entries reviewed, reaching an April 11, 2014 post. 60 expressions qualify: 54 expandable text posts and 6 original captioned videos. This is the loaded Posts timeline, not an account export.",
+    "reviewedCount": 241,
+    "oldestReviewedPostId": "454764807393398784",
+    "oldestReviewedDate": "2014-04-11",
+    "oldestIncludedDate": "2026-07-19",
+    "newestIncludedDate": "2026-10-12",
+    "gaps": [
+      "X can omit entries from its loaded timeline; reaching the bottom is not proof of an exhaustive archive.",
+      "Replies and repost archives were not traversed. No connected expandable thread was identified for consolidation.",
+      "Five native X Articles were observed but are outside the current strict expandable-post/video selection. Their full article bodies were not inspected. Include only after the user broadens the rule.",
+      "Video captions and players were verified; footage and speech were not reviewed or used to invent descriptions.",
+      "Publication dates use rendered time datetime values converted to America/Los_Angeles, matching this signed-in browser. Existing two dates remain unchanged."
+    ],
+    "exclusionSummary": "181 observed entries omitted: 171 other short/text-image/repost entries without qualifying expanded own text or original captioned video, 2 short wrappers around included videos, 1 textless video, 1 GIF, 5 native Articles, and 1 bare quote of an Article."
+  },
+  "posts": [
+    {
+      "id": "2109756082604372407",
+      "url": "https://x.com/koopuluri/status/2109756082604372407",
+      "publishedDate": "2026-10-12",
+      "title": "on intrinsic desire",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-12",
+        "dateLabel": "2:20 PM · Oct 12, 2026",
+        "titleBasis": "Opening words, with the colon removed.",
+        "requiresExpansion": true,
+        "evidence": "Profile text ended at 'when i have a desire that is' with a Show more button. Expanded it and read the full original post. No reply attribution was shown.",
+        "excerpts": [
+          "on intrinsic desire:",
+          "ive been exploring a superfeed app.",
+          "my intrinsic desire is actually much much simpler: i just want to discover more people id vibe with. who i can connect with. who i can jam with.",
+          "i need to be much better about being intrinsically driven."
+        ],
+        "context": "Explores making things from intrinsic desire rather than trying to impress others, using a possible superfeed versus a simpler people-discovery agent as an example. Describes difficulty distinguishing these motivations; do not frame this as a settled conviction or an existing launched product."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2109719121814601740",
+      "url": "https://x.com/koopuluri/status/2109719121814601740",
+      "publishedDate": "2026-10-12",
+      "publishedAt": "2026-10-12T18:53:29Z",
+      "title": "create for yourself",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "when everyone has the means to create simply by expressing their desire, you can only create for yourself."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2109511855718924688",
+      "url": "https://x.com/koopuluri/status/2109511855718924688",
+      "publishedDate": "2026-10-11",
+      "publishedAt": "2026-10-12T05:09:53Z",
+      "title": "i've given up on plans",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "reality is too rich with all sorts of possibilities that are connected in ways that i can't fathom."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2109504017391092152",
+      "url": "https://x.com/koopuluri/status/2109504017391092152",
+      "publishedDate": "2026-10-11",
+      "title": "nothing special",
+      "selectionType": "video_with_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-12",
+        "dateLabel": "9:38 PM · Oct 11, 2026",
+        "titleBasis": "Exact text above the video.",
+        "textAboveVideo": "nothing special",
+        "evidence": "Found quoted within profile post 2109747794340987128; opened the original. Text 'nothing special' appears directly above its video player. No reply attribution was shown. The profile's quoted player displayed a 01:16 duration.",
+        "context": "Only the available text is used. No inferred description of the footage or spoken content."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2109398788142219334",
+      "url": "https://x.com/koopuluri/status/2109398788142219334",
+      "publishedDate": "2026-10-11",
+      "publishedAt": "2026-10-11T21:40:36Z",
+      "title": "functional vs. cosmetic design",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "when i was prompting into existence my video maker app, i was focusing purely on solving my problem that translating clips into a video i could ship took too long"
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2109390120923365455",
+      "url": "https://x.com/koopuluri/status/2109390120923365455",
+      "publishedDate": "2026-10-11",
+      "publishedAt": "2026-10-11T21:06:10Z",
+      "title": "i aim to work entirely on my phone",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "my laptop is for my ai. being untethered from my desk has been incredibly liberating."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2109038133153263934",
+      "url": "https://x.com/koopuluri/status/2109038133153263934",
+      "publishedDate": "2026-10-10",
+      "publishedAt": "2026-10-10T21:47:29Z",
+      "title": "how can i get ai to understand my taste?",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "i view it as a feeling, a tug, a reaction."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2109021465177882808",
+      "url": "https://x.com/koopuluri/status/2109021465177882808",
+      "publishedDate": "2026-10-10",
+      "publishedAt": "2026-10-10T20:41:15Z",
+      "title": "personal agents should be aligned with their person",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "it's critical that personal agents are aligned with the person they are for, not a central platform / company. else perverse incentives."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2108996162380607728",
+      "url": "https://x.com/koopuluri/status/2108996162380607728",
+      "publishedDate": "2026-10-10",
+      "publishedAt": "2026-10-10T19:00:43Z",
+      "title": "i want to train my personal intelligence",
+      "selectionType": "video_with_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "i want to train my personal intelligence that understands *me*."
+        ],
+        "textAboveVideo": "i want to train my personal intelligence that understands *me*.",
+        "evidence": "Original video player (1:30) with this text above it was visible in the signed-in Posts timeline; opened the original and verified its own text. This is not merely a quoted video. No reply attribution shown.",
+        "context": "Title uses only the verified caption. Footage and speech were not interpreted."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2108760120134123649",
+      "url": "https://x.com/koopuluri/status/2108760120134123649",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-10T03:22:46Z",
+      "title": "i made an app that helps me make videos the way i like",
+      "selectionType": "video_with_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "i made an app that helps me make videos the way i like."
+        ],
+        "textAboveVideo": "i made an app that helps me make videos the way i like.",
+        "evidence": "Original video player (1:15) with this text above it was visible in the signed-in Posts timeline; opened the original and verified its own text. This is not merely a quoted video. No reply attribution shown.",
+        "context": "Title uses only the verified caption. Footage and speech were not interpreted."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2108694126900412509",
+      "url": "https://x.com/koopuluri/status/2108694126900412509",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T23:00:32Z",
+      "title": "success has become a handicap",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "ai forces us to change our approach to everything we do in such a fundamental way that those who won in a pre-ai world will find it very difficult to retain their top positions moving forward."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2108634520018964787",
+      "url": "https://x.com/koopuluri/status/2108634520018964787",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T19:03:40Z",
+      "title": "ride the exponential growth curve",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "accept that the world will sleep on you for a looooong af time."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2108631617669660999",
+      "url": "https://x.com/koopuluri/status/2108631617669660999",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T18:52:08Z",
+      "title": "someone needs to build an apple competitor",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "frontier labs too distracted with more obv paths to $ to explore this."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2108607202449936838",
+      "url": "https://x.com/koopuluri/status/2108607202449936838",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T17:15:07Z",
+      "title": "i don't want choices",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "i just want ai to understand me and give me what i want."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2108268632791015622",
+      "url": "https://x.com/koopuluri/status/2108268632791015622",
+      "publishedDate": "2026-10-08",
+      "publishedAt": "2026-10-08T18:49:46Z",
+      "title": "the sheep and the rope",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "for as long as i can remember, my dad would tell me this story:",
+          "the shepherd got rid of the rope. the rest of the sheep, one by one, still jumped in the same way over the \"rope\"."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2108247998086189468",
+      "url": "https://x.com/koopuluri/status/2108247998086189468",
+      "publishedDate": "2026-10-08",
+      "publishedAt": "2026-10-08T17:27:46Z",
+      "title": "im a sheep",
+      "selectionType": "video_with_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "im a sheep."
+        ],
+        "textAboveVideo": "im a sheep.",
+        "evidence": "Original video player (2:19) with this text above it was visible in the signed-in Posts timeline; opened the original and verified its own text. This is not merely a quoted video. No reply attribution shown.",
+        "context": "Title uses only the verified caption. Footage and speech were not interpreted."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2107916726273011771",
+      "url": "https://x.com/koopuluri/status/2107916726273011771",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T19:31:25Z",
+      "title": "person <> concept association",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "this is an incredibly powerful sort of person<>concept association."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2107160120484577479",
+      "url": "https://x.com/koopuluri/status/2107160120484577479",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T17:24:56Z",
+      "title": "ai and original artistry",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "i dont think AI can ever match the sort of original artistry that humans are capable of. i havent even seen a glimpse of it."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2105377482883072235",
+      "url": "https://x.com/koopuluri/status/2105377482883072235",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T19:21:22Z",
+      "title": "you should build a taste stack",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "a set of references and prompts across mediums: writing, music, video, code, people, etc. that represents what/who you vibe with and the way you want to express yourself."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2104357001644138590",
+      "url": "https://x.com/koopuluri/status/2104357001644138590",
+      "publishedDate": "2026-09-27",
+      "publishedAt": "2026-09-27T23:46:20Z",
+      "title": "i want to back ambitiously curious misfits early",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "i want to back the crazy ones, the rebels, the troublemakers, the round pegs in the square holes, the ones with the courage to follow their innate curiosities and pursue their deepest callings."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2104345106442805354",
+      "url": "https://x.com/koopuluri/status/2104345106442805354",
+      "publishedDate": "2026-09-27",
+      "publishedAt": "2026-09-27T22:59:04Z",
+      "title": "ambitiously curious misfits",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "the ones who will create the greatest value for humanity will be curious, ambitious, and unfragmented."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2103600548863951204",
+      "url": "https://x.com/koopuluri/status/2103600548863951204",
+      "publishedDate": "2026-09-25",
+      "publishedAt": "2026-09-25T21:40:28Z",
+      "title": "ai helps people be more like people",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "AI helps people be more like people by doing the rest of the shit for us."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2103598178704806225",
+      "url": "https://x.com/koopuluri/status/2103598178704806225",
+      "publishedDate": "2026-09-25",
+      "publishedAt": "2026-09-25T21:31:03Z",
+      "title": "expressing myself in my natural chaotic way",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "knowing i have the help of AI to sift through, organize, and make sense of my thinking makes me more comfortable to express myself in my natural chaotic way as ideas come to my mind."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2103205228791407003",
+      "url": "https://x.com/koopuluri/status/2103205228791407003",
+      "publishedDate": "2026-09-24",
+      "publishedAt": "2026-09-24T19:29:36Z",
+      "title": "attached to the process or to progress?",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "are you attached to a specific process (physics / math / coding, etc.) or to progress?"
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2098271450222481496",
+      "url": "https://x.com/koopuluri/status/2098271450222481496",
+      "publishedDate": "2026-09-10",
+      "publishedAt": "2026-09-11T04:44:32Z",
+      "title": "losing to china has consequences",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "losing to china has legit consequences that has nothing to do with jealousy."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2098224487141617729",
+      "url": "https://x.com/koopuluri/status/2098224487141617729",
+      "publishedDate": "2026-09-10",
+      "publishedAt": "2026-09-11T01:37:55Z",
+      "title": "advancing the frontier gets harder",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "AI makes advancing the frontier harder, not easier. to help advance the frontier, you need to be able to have an insight that AI (or the folks a the frontier labs using AI) cannot."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2098220638486061228",
+      "url": "https://x.com/koopuluri/status/2098220638486061228",
+      "publishedDate": "2026-09-10",
+      "publishedAt": "2026-09-11T01:22:37Z",
+      "title": "new instruments for harder explorations",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "AI makes advancing the frontier harder, not easier. to help advance the frontier, you need to be able to have an insight that AI (or someone else using AI) cannot.",
+          "we need new instruments (like personal stocks) to enable more people to embark on the harder, longer, more risky explorations that are now required to advance the frontier."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2098154907572519353",
+      "url": "https://x.com/koopuluri/status/2098154907572519353",
+      "publishedDate": "2026-09-10",
+      "publishedAt": "2026-09-10T21:01:26Z",
+      "title": "new jobs, greater risk",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "these new jobs will be substantially more difficult, and will have a far more extreme power law distribution of outcomes."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2098151792395927560",
+      "url": "https://x.com/koopuluri/status/2098151792395927560",
+      "publishedDate": "2026-09-10",
+      "publishedAt": "2026-09-10T20:49:03Z",
+      "title": "personal stocks onchain",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "When all of my assets are held onchain, capital from selling them can flow directly to my shareholders pro rata."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2098144009566957653",
+      "url": "https://x.com/koopuluri/status/2098144009566957653",
+      "publishedDate": "2026-09-10",
+      "publishedAt": "2026-09-10T20:18:08Z",
+      "title": "from ideas to the people behind them",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "Our attention will increasingly shift from ideas to the people behind them."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2097864513823687134",
+      "url": "https://x.com/koopuluri/status/2097864513823687134",
+      "publishedDate": "2026-09-09",
+      "publishedAt": "2026-09-10T01:47:31Z",
+      "title": "the insight moat",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "may not have a product moat, but they def have the insight moat."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2097856953271963779",
+      "url": "https://x.com/koopuluri/status/2097856953271963779",
+      "publishedDate": "2026-09-09",
+      "publishedAt": "2026-09-10T01:17:28Z",
+      "title": "personal stocks help us explore",
+      "selectionType": "video_with_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "personal stocks help us explore."
+        ],
+        "textAboveVideo": "personal stocks help us explore.",
+        "evidence": "Original video player (about 1:39; playback displayed 1:38) with this text above it was visible in the signed-in Posts timeline; opened the original and verified its own text. This is not merely a quoted video. No reply attribution shown.",
+        "context": "Title uses only the verified caption. Footage and speech were not interpreted."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2097772641159635419",
+      "url": "https://x.com/koopuluri/status/2097772641159635419",
+      "publishedDate": "2026-09-09",
+      "publishedAt": "2026-09-09T19:42:27Z",
+      "title": "concentration of power and oppression",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "Wherever there is concentration of power, you will find oppression."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2097555035995709945",
+      "url": "https://x.com/koopuluri/status/2097555035995709945",
+      "publishedDate": "2026-09-08",
+      "publishedAt": "2026-09-09T05:17:45Z",
+      "title": "what i fear about ai",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "Concentration of power worries me far more than AI killing humanity."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2097431402270859719",
+      "url": "https://x.com/koopuluri/status/2097431402270859719",
+      "publishedDate": "2026-09-08",
+      "publishedAt": "2026-09-08T21:06:29Z",
+      "title": "holding extreme opposites at the same time",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "Bringing something new to the world requires holding extreme opposites at the same time."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2096678357014598051",
+      "url": "https://x.com/koopuluri/status/2096678357014598051",
+      "publishedDate": "2026-09-06",
+      "publishedAt": "2026-09-06T19:14:09Z",
+      "title": "what a personal stock is",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "A personal stock is an open-source legal agreement that lets you share a stake in your upside across your life."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2093066585279963384",
+      "url": "https://x.com/koopuluri/status/2093066585279963384",
+      "publishedDate": "2026-08-27",
+      "publishedAt": "2026-08-27T20:02:15Z",
+      "title": "we are our biggest bottlenecks",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "we have literal superpowers but are constrained by our own minds."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2091663169462862066",
+      "url": "https://x.com/koopuluri/status/2091663169462862066",
+      "publishedDate": "2026-08-23",
+      "publishedAt": "2026-08-23T23:05:35Z",
+      "title": "sharing ideas with people who've created things",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "ive stopped sharing ideas / asking for feedback from people who've never taken the risk to bring anything into the world."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2090971365746827365",
+      "url": "https://x.com/koopuluri/status/2090971365746827365",
+      "publishedDate": "2026-08-21",
+      "publishedAt": "2026-08-22T01:16:36Z",
+      "title": "attack the kumbhasthalam",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "Attack the kumbhasthalam."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2090557946765951015",
+      "url": "https://x.com/koopuluri/status/2090557946765951015",
+      "publishedDate": "2026-08-20",
+      "publishedAt": "2026-08-20T21:53:49Z",
+      "title": "i believe we need universal basic equity",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "i believe universal basic equity is needed in some way shape or form to enable ai acceleration."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2090531956132020732",
+      "url": "https://x.com/koopuluri/status/2090531956132020732",
+      "publishedDate": "2026-08-20",
+      "publishedAt": "2026-08-20T20:10:33Z",
+      "title": "the personal stock is a way of life",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "It requires a much more positive-sum approach to life than we are used to."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2090495078964051985",
+      "url": "https://x.com/koopuluri/status/2090495078964051985",
+      "publishedDate": "2026-08-20",
+      "publishedAt": "2026-08-20T17:44:01Z",
+      "title": "some thoughts on my stock's seed round",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "I want shareholders who deeply resonate with this idea of personal stocks."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2090204640105423198",
+      "url": "https://x.com/koopuluri/status/2090204640105423198",
+      "publishedDate": "2026-08-19",
+      "publishedAt": "2026-08-19T22:29:54Z",
+      "title": "another example of indefinite optimism",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "another example of indefinite optimism, with criticism of definite optimism. (which are interestingly often expressed together)."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2089941451740414077",
+      "url": "https://x.com/koopuluri/status/2089941451740414077",
+      "publishedDate": "2026-08-18",
+      "publishedAt": "2026-08-19T05:04:05Z",
+      "title": "people seem to hate definite optimism",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "Whenever I share a prediction / plan that looks a few years out into the future, most people instinctively react by saying that I can’t possibly think / see that far ahead."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2089823210971996364",
+      "url": "https://x.com/koopuluri/status/2089823210971996364",
+      "publishedDate": "2026-08-18",
+      "publishedAt": "2026-08-18T21:14:15Z",
+      "title": "will personal stocks lead to adverse selection?",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "This is a common question people have when I discuss the idea of personal stocks."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2089792454409285985",
+      "url": "https://x.com/koopuluri/status/2089792454409285985",
+      "publishedDate": "2026-08-18",
+      "publishedAt": "2026-08-18T19:12:02Z",
+      "title": "my monkey mind and the lack of status",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "Our monkey minds are wired to treat lack of status as a greater existential threat than lack of money."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2089566114703712701",
+      "url": "https://x.com/koopuluri/status/2089566114703712701",
+      "publishedDate": "2026-08-17",
+      "publishedAt": "2026-08-18T04:12:38Z",
+      "title": "good behavior around personal stocks",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "If you do not back a founder after spending sufficient time with them (which, in the earliest stages is not that long!), you communicate that you do not believe in them.",
+          "I've been thinking a lot about what good behavior looks like in the context of personal stocks because having the right culture among the early adopters is critical to get personal stocks off the ground."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2089525602168770565",
+      "url": "https://x.com/koopuluri/status/2089525602168770565",
+      "publishedDate": "2026-08-17",
+      "publishedAt": "2026-08-18T01:31:39Z",
+      "title": "control and equity should be more disconnected",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "Founders should be able to share more equity with more people to accelerate their company, without giving up control over their ship."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2089521220110958756",
+      "url": "https://x.com/koopuluri/status/2089521220110958756",
+      "publishedDate": "2026-08-17",
+      "publishedAt": "2026-08-18T01:14:14Z",
+      "title": "ai will show us what it means to be human",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Phrase quoted from @AksharYadavalli in the opening of Karthik’s own expanded discussion, lowercased.",
+        "excerpts": [
+          "what makes us human isn't our intelligence. it isn't our ability to analyze, plan, reason. these will all become commodities."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2089512938562543813",
+      "url": "https://x.com/koopuluri/status/2089512938562543813",
+      "publishedDate": "2026-08-17",
+      "publishedAt": "2026-08-18T00:41:20Z",
+      "title": "sometimes i feel a little insane",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "Every time i talk to someone about personal stocks and they just fundamentally don't get it, i feel a little insane."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2089201252114542669",
+      "url": "https://x.com/koopuluri/status/2089201252114542669",
+      "publishedDate": "2026-08-16",
+      "publishedAt": "2026-08-17T04:02:48Z",
+      "title": "buying out toxic shareholders",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "This is precisely why in the case of personal stocks people must have the ability to buy out toxic shareholders."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2086842170863157694",
+      "url": "https://x.com/koopuluri/status/2086842170863157694",
+      "publishedDate": "2026-08-10",
+      "publishedAt": "2026-08-10T15:48:39Z",
+      "title": "greatness demands simplicity",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "Greatness demands simplicity."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2085869354537853252",
+      "url": "https://x.com/koopuluri/status/2085869354537853252",
+      "publishedDate": "2026-08-07",
+      "publishedAt": "2026-08-07T23:23:02Z",
+      "title": "who are personal stocks for?",
+      "selectionType": "video_with_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "Who are personal stocks for?\n\nWhile the starting point will likely be future founders, increasingly, personal stocks will be for everyone."
+        ],
+        "textAboveVideo": "Who are personal stocks for?\n\nWhile the starting point will likely be future founders, increasingly, personal stocks will be for everyone.",
+        "evidence": "Original video player (2:32) with this text above it was visible in the signed-in Posts timeline; opened the original and verified its own text. This is not merely a quoted video. No reply attribution shown.",
+        "context": "Title uses only the verified caption. Footage and speech were not interpreted."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2085438050226819309",
+      "url": "https://x.com/koopuluri/status/2085438050226819309",
+      "publishedDate": "2026-08-06",
+      "publishedAt": "2026-08-06T18:49:11Z",
+      "title": "personal stock v0.9",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "The Personal Stock is an instrument that lets a person share equity in their success across their life."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2084790013783580740",
+      "url": "https://x.com/koopuluri/status/2084790013783580740",
+      "publishedDate": "2026-08-04",
+      "publishedAt": "2026-08-04T23:54:07Z",
+      "title": "from story to code",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "A founder must be able to swiftly and fluidly move across all levels of abstractions and time horizons. From story to code. From this moment to decades later."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2084064238147170656",
+      "url": "https://x.com/koopuluri/status/2084064238147170656",
+      "publishedDate": "2026-08-02",
+      "publishedAt": "2026-08-02T23:50:09Z",
+      "title": "going almost fully mobile",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "AI has enabled me to go (almost) fully mobile. Something I've been wanting to do for a long time but was always restricted by the phone's lack critical tools and workflows."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2081185746933924335",
+      "url": "https://x.com/koopuluri/status/2081185746933924335",
+      "publishedDate": "2026-07-25",
+      "publishedAt": "2026-07-26T01:12:03Z",
+      "title": "a celebration of creating",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "It makes me really happy to see such a large scale celebration of creating."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2081064036943425542",
+      "url": "https://x.com/koopuluri/status/2081064036943425542",
+      "publishedDate": "2026-07-25",
+      "publishedAt": "2026-07-25T17:08:25Z",
+      "title": "everything is downstream of the story",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "Who you build for, who you build with, what you build and how you build it - all comes from the story you're trying to tell."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2080468623165149652",
+      "url": "https://x.com/koopuluri/status/2080468623165149652",
+      "publishedDate": "2026-07-23",
+      "publishedAt": "2026-07-24T01:42:27Z",
+      "title": "the personal cap table as a social network",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Short descriptive title grounded in the full original text.",
+        "excerpts": [
+          "The personal cap table is the next iteration of social networks."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    },
+    {
+      "id": "2078902409653583887",
+      "url": "https://x.com/koopuluri/status/2078902409653583887",
+      "publishedDate": "2026-07-19",
+      "publishedAt": "2026-07-19T17:58:53Z",
+      "title": "it takes a village",
+      "selectionType": "long_text",
+      "sourceContext": {
+        "verifiedAt": "2026-10-13T00:42:24Z",
+        "titleBasis": "Author's own words, lowercased and lightly shortened or with punctuation removed.",
+        "excerpts": [
+          "The further we want to go, the greater the support we need."
+        ],
+        "requiresExpansion": true,
+        "evidence": "Own text had Show more in the signed-in Posts timeline. Opened the original and read its expanded text. Not an ordinary reply; quoted media, where present, is not the inclusion basis."
+      },
+      "threadPostIds": []
+    }
+  ],
+  "excluded": [
+    {
+      "id": "2109765422845431961",
+      "reason": "Short quote-post comment: 'the final moat.' No expandable long text or own video with text."
+    },
+    {
+      "id": "2109756584301891752",
+      "reason": "Short text about AI fulfilling desires; no expansion or video."
+    },
+    {
+      "id": "2109747794340987128",
+      "reason": "Short Tagore quotation above a quoted video post. Excluded the wrapper and included the qualifying original video once."
+    },
+    {
+      "id": "2109740938126049450",
+      "reason": "Video without any text above it."
+    },
+    {
+      "id": "2109419596981899363",
+      "reason": "Short wrapper around included video 2108996162380607728; no own expanded text or original video."
+    },
+    {
+      "id": "2105804127909671204",
+      "reason": "Short text with media explicitly labeled GIF; not a qualifying original video."
+    },
+    {
+      "id": "2081947057284354234",
+      "reason": "Bare quote of native Article 2081196820936757550; no own text."
+    },
+    {
+      "id": "2106244337814364332",
+      "reason": "Native X Article: people will be ai's app layer. Deferred because the current rule permits expandable posts and original captioned videos only. Full body not inspected."
+    },
+    {
+      "id": "2091050880716226787",
+      "reason": "Native X Article: silicon valley is losing its way. Deferred because the current rule permits expandable posts and original captioned videos only. Full body not inspected."
+    },
+    {
+      "id": "2090882419868241971",
+      "reason": "Native X Article: how do you value a person's stock?. Deferred because the current rule permits expandable posts and original captioned videos only. Full body not inspected."
+    },
+    {
+      "id": "2090163621099970815",
+      "reason": "Native X Article: i launched my stock. Deferred because the current rule permits expandable posts and original captioned videos only. Full body not inspected."
+    },
+    {
+      "id": "2081196820936757550",
+      "reason": "Native X Article: a cap table for your life. Deferred because the current rule permits expandable posts and original captioned videos only. Full body not inspected."
+    }
+  ]
+}

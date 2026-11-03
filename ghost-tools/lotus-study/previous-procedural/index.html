@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4edd5">
+  <title>Personhood — An unfolding</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 52C7 43 4 27 9 16c14 2 22 13 23 36M32 52c25-9 28-25 23-36-14 2-22 13-23 36M32 52C16 34 20 15 32 4c12 11 16 30 0 48' fill='none' stroke='%236a695e' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header><a class="wordmark" href="./">π <span>/</span> PERSONHOOD</a><span class="study-label">MOTION STUDY · 04</span><button id="focus" title="Hide controls (H)">Hide controls <span>↗</span></button></header>
+  <main>
+    <section class="view" aria-label="Personhood animation">
+      <div class="title-row"><div><p class="eyebrow">THE BLOSSOMING OF HUMAN POTENTIAL</p><h1>An unfolding.</h1></div><span class="format">4 : 3<br><small>LIVE STUDY</small></span></div>
+      <div id="stage" class="stage">
+        <div id="loading">Opening the first blossom…</div>
+        <canvas id="scene" aria-label="An endlessly blooming lotus behind a human outline"></canvas>
+        <svg id="figure" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" aria-label="A gender-neutral human outline with outstretched arms and separated legs">
+          <defs>
+            <filter id="pencil" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".19" numOctaves="2" seed="8" result="tooth"/><feDisplacementMap in="SourceGraphic" in2="tooth" scale=".55" xChannelSelector="R" yChannelSelector="G"/></filter>
+          </defs>
+          <g id="figure-transform" transform="translate(500 375) scale(1) translate(-500 -415)">
+            <path id="human-outline" fill="none" stroke="#43483f" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" filter="url(#pencil)" d="M 486 228
+              C 487 237 487 243 480 247 C 471 249 461 252 451 255
+              C 436 252 414 244 397 237 C 381 231 366 225 350 219
+              C 327 208 300 197 275 186 C 269 182 262 177 255 175
+              L 236 164 Q 233 163 233 166 L 246 177 L 229 169 Q 225 169 227 173 L 243 184
+              L 226 179 Q 222 180 225 183 L 242 191 L 229 187 Q 225 188 229 191 L 247 198
+              Q 253 201 260 199 L 269 197 Q 274 197 280 202
+              C 300 211 325 225 345 237 C 369 250 398 263 424 277
+              C 433 283 439 289 442 297 C 448 319 451 343 457 364
+              C 460 377 460 392 456 407 C 450 420 448 436 445 450
+              C 433 478 419 507 407 531 C 399 551 390 577 379 599
+              L 355 648 Q 350 659 344 662 L 327 671 Q 320 675 322 679
+              Q 333 684 348 680 L 369 675 Q 375 672 374 665
+              C 380 646 390 625 400 609 C 414 586 427 568 439 550
+              C 451 530 463 506 475 484 C 484 469 490 458 497 451
+              Q 500 449 503 451 C 510 458 516 469 525 484
+              C 537 506 549 530 561 550 C 573 568 586 586 600 609
+              C 610 625 620 646 626 665 Q 625 672 631 675 L 652 680
+              Q 667 684 678 679 Q 680 675 673 671 L 656 662
+              Q 650 659 645 648 L 621 599 C 610 577 601 551 593 531
+              C 581 507 567 478 555 450 C 552 436 550 420 544 407
+              C 540 392 540 377 543 364 C 549 343 552 319 558 297
+              C 561 289 567 283 576 277 C 602 263 631 250 655 237
+              C 675 225 700 211 720 202 Q 726 197 731 197 L 740 199
+              Q 747 201 753 198 L 771 191 Q 775 188 771 187 L 758 191
+              L 775 183 Q 778 180 774 179 L 757 184 L 773 173 Q 775 169 771 169
+              L 754 177 L 767 166 Q 767 163 764 164 L 745 175
+              C 738 177 731 182 725 186 C 700 197 673 208 650 219
+              C 634 225 619 231 603 237 C 586 244 564 252 549 255
+              C 539 252 529 249 520 247 C 513 243 513 237 514 228
+              C 523 220 527 210 527 197 Q 531 193 528 186
+              C 528 171 522 160 512 157 Q 500 152 488 157
+              C 478 160 472 171 472 186 Q 469 193 473 197
+              C 473 210 477 220 486 228 Z"/>
+          </g>
+        </svg>
+        <div id="error" hidden></div>
+        <span class="corner-mark top-left"></span><span class="corner-mark bottom-right"></span>
+      </div>
+      <div class="transport"><button id="play" aria-label="Pause animation"><span id="play-icon">Ⅱ</span></button><input id="timeline" aria-label="Animation timeline" type="range" min="0" max="1000" value="0"><output id="time">0.00 / 5.0s</output><button id="restart" title="Restart the loop">↺</button></div>
+      <div class="caption"><span>A constant presence. An endless becoming.</span><span id="status">Preparing the scene</span></div>
+    </section>
+    <aside id="controls" aria-label="Scene controls">
+      <div class="panel-heading"><h2>The study</h2><button id="reset">Reset</button></div>
+      <p class="panel-intro">Adjust the scene as it unfolds.</p>
+      <fieldset><legend>Motion</legend>
+        <label for="duration">Loop length <output data-for="duration"></output></label><input id="duration" type="range" min="3" max="16" step=".5">
+        <label for="zoom">Zoom distance <output data-for="zoom"></output></label><input id="zoom" type="range" min="2.8" max="5" step=".05">
+        <label for="bloom">Bloom timing <output data-for="bloom"></output></label><input id="bloom" type="range" min="-1" max="1" step=".02">
+        <label for="curl">Petal curl <output data-for="curl"></output></label><input id="curl" type="range" min="0" max="1.4" step=".01">
+      </fieldset>
+      <fieldset><legend>Drawing</legend>
+        <label for="figureSize">Figure size <output data-for="figureSize"></output></label><input id="figureSize" type="range" min=".65" max="1.25" step=".01">
+        <label for="line">Outline weight <output data-for="line"></output></label><input id="line" type="range" min=".5" max="3" step=".05">
+        <label for="contrast">Petal contrast <output data-for="contrast"></output></label><input id="contrast" type="range" min="0" max="1" step=".01">
+        <label for="grain">Paper & pigment grain <output data-for="grain"></output></label><input id="grain" type="range" min="0" max="1.5" step=".02">
+      </fieldset>
+      <fieldset class="layers"><legend>Layers</legend><label><input id="show-figure" type="checkbox" checked><span>Human outline</span></label><label><input id="show-lotus" type="checkbox" checked><span>Recursive lotus</span></label></fieldset>
+      <div class="actions"><button id="save">Save frame <span>↓</span></button><button id="copy">Copy study link <span>↗</span></button></div>
+      <p class="hint"><kbd>Space</kbd> play / pause <span>·</span> <kbd>H</kbd> hide controls</p>
+    </aside>
+  </main>
+  <footer><span>PERSONHOOD / LOTUS EXPLORATION</span><span>Drawn in light. Always becoming.</span></footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
