@@ -9,6 +9,8 @@ Ghost is the canonical collection, including `personal-site/` and `ghost-tools/`
 
 ## prepare the release
 
+First read and apply [organize](../organize/SKILL.md) to align the repository with Ghost's structure. Complete its moves, reference repairs, and relevant checks before preparing a release plan or proposing the final commit message. Include those changes in the publication scope. Resolve any organization issue that would leave affected references broken before preparing; report ambiguous placements without guessing. Do not run organization between approval and execution of an existing plan; any new organization changes require a fresh prepared plan and message approval.
+
 Inspect the working changes and last published revision. Preserve user wording and source records. New editorial annotations in user material start with `> π:`; ordinary status updates and the commit message do not need that prefix.
 
 Complete necessary edits and appropriate checks before asking for message approval. Review `ghost.publish.json` and confirm the intended destinations. Source and site copy are public; the R2 archive is private. Credentials, browser sessions, local app state, build products, and private media bytes must not enter the Git publication. If the credential scan finds a value in a historical transcript, do not rewrite the source record silently: resolve its publication treatment with the user.

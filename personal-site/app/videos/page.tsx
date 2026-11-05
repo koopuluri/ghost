@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 // Index of every scene. Each links to its frame-by-frame inspector + exporter.
 export default function VideosIndexPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "3rem 1.25rem" }}>
-      <h1 style={{ fontSize: "1.4rem", marginBottom: "1rem" }}>Videos</h1>
+    <main className="page">
+      <h1 style={{ marginBottom: "1rem" }}>Videos</h1>
       <p style={{ color: "var(--caption)", marginBottom: "2rem" }}>
         Each scene is a frame-driven Remotion composition — the same source that
         renders in the essays. Open one to inspect it frame by frame and export

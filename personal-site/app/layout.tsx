@@ -3,8 +3,8 @@ import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 
-// Inter as a variable font. We drive the exact weight (420) from CSS in
-// globals.css; the variable font lets us hit non-standard weights smoothly.
+// The same variable Inter font used by benji.org. Global CSS sets the measured
+// 14px / 20px typography, with weight 460 for body text and 500 for page titles.
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",

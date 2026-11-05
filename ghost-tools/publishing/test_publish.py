@@ -149,6 +149,28 @@ class PublicationTests(unittest.TestCase):
             s.upload(self.root, p.assets(self.root))
         s.call.assert_not_called()
 
+    def test_moved_asset_uploads_from_current_path_and_retains_history(self):
+        original = self.root / 'clip.mov'
+        original.write_bytes(b'original video')
+        before = p.assets(self.root)
+        p.write_json(self.root / 'assets/manifest.json', before)
+        original.rename(self.root / 'assets/clip.mov')
+        manifest = p.assets(self.root)
+        self.assertIn('clip.mov', manifest['files'])
+        self.assertEqual(manifest['files']['clip.mov'], manifest['files']['assets/clip.mov'])
+        # Reproduce a historical path sorting before its current location.
+        manifest['files'] = {name: manifest['files'][name]
+                             for name in ['clip.mov', 'assets/clip.mov']}
+        item = manifest['files']['clip.mov']
+        s = object.__new__(p.Storage)
+        s.config = {'max_upload_bytes': 100, 'max_archive_bytes': 100, 'max_objects': 100}
+        s.inventory = Mock(return_value={})
+        s.call = Mock(side_effect=[{}, {'ContentLength': item['bytes'], 'Metadata': {'sha256': item['sha256']}}])
+        self.assertEqual(s.upload(self.root, manifest), 1)
+        self.assertEqual(s.call.call_args_list[0].kwargs['Body'].name,
+                         str(self.root / 'assets/clip.mov'))
+        self.assertIn('clip.mov', manifest['files'])
+
 
 if __name__ == '__main__':
     unittest.main()

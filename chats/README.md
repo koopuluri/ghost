@@ -24,3 +24,17 @@ extend an existing transcript only after checking that earlier messages and anno
 - [plan manifesto imagery](2026-11-02-plan-manifesto-imagery.md) — visual experiments, the lotus composition, icon reveal, music, and the final personal manifesto video.
 
 - [ghost browser navigation arrows](2026-11-03-ghost-browser-navigation-arrows.md) — back and forward controls, disabled history states, and live navigation verification.
+- [lotus visual associations](2026-11-03-lotus-visual-associations.md) — personal manifesto imagery, lotus symbolism, and possible political associations.
+- [personal manifesto language](2026-11-03-personal-manifesto-language.md) — individual potential, friendship and seeking truth, and roles, disciplines, and domains.
+
+- [the personal stack](2026-11-03-the-personal-stack.md) — manifesto naming, opening polish, and preserving the imagery of potential, access, and depth.
+- [publishing ghost](2026-11-03-publishing-ghost.md) — monorepo architecture, private media, publication approvals, the personal site, and the first publish.
+- [ghost skills and organization](2026-11-03-ghost-skills-and-organization.md) — local skills, the organize workflow, publication integration, and repository cleanup.
+- [Code Storage for Ghost](2026-11-04-code-storage-for-ghost.md) — storage model, Git LFS, pricing, and retaining GitHub + R2 for cost efficiency.
+- [personal site foundation](2026-11-03-build-personal-site-foundation.md) — three-icon navigation, The Personal Stack, Markdown metadata and video, typography, spacing, and the responsive profile navbar.
+
+- [personal AI essay](2026-11-04-personal-ai-essay.md) — the walk-note artifact map and the foundational Personal Artificial Intelligence essay’s core beats.
+
+- [Lovebirds process](../expression/videos/lovebirds.md) — selected creative discussion and native video iterations; full conversation archived separately below.
+
+- [Design video iteration process](2026-11-04-video-iteration-process.md) — original conversation about the video workflow, Lovebirds iterations, defaults, audio levels, and exports; separate from the working process document.

@@ -244,7 +244,12 @@ class Storage:
         remote = self.inventory()
         unique = {}
         for rel, item in manifest['files'].items():
-            unique.setdefault(item['key'], (rel, item))
+            previous = unique.get(item['key'])
+            # Retain historical restore records, but upload from a current path
+            # when organization moved an asset before its first backup.
+            if previous is None or (not inside(root, previous[0]).is_file()
+                                    and inside(root, rel).is_file()):
+                unique[item['key']] = (rel, item)
         missing = [(rel, a) for key, (rel, a) in unique.items() if key not in remote]
         size = sum(a['bytes'] for _, a in missing)
         if size > self.config['max_upload_bytes'] or size + sum(remote.values()) > self.config['max_archive_bytes']:

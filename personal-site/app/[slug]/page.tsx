@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatDate, getPostMeta, getPostSlugs } from "@/lib/posts";
 import { site } from "@/lib/site";
 
+import GhostEssay from "@/components/GhostEssay";
+import selectedEssays from "@/content/selected-essays.json";
+import { readSelectedEssay } from "@/lib/selected-essays";
+
 type Params = { slug: string };
 
 export function generateStaticParams(): Params[] {
-  return getPostSlugs().map((slug) => ({ slug }));
+  return [...selectedEssays.map(({ slug }) => ({ slug })), ...getPostSlugs().map((slug) => ({ slug }))];
 }
 
+export const dynamic = "error";
 export const dynamicParams = false;
 
 export async function generateMetadata({
@@ -19,6 +22,8 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  const essay = await readSelectedEssay(slug);
+  if (essay) return { title: essay.title, alternates: { canonical: `/${slug}` } };
   const meta = getPostMeta(slug);
   if (!meta) return {};
 
@@ -50,6 +55,10 @@ export default async function EssayPage({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
+  const essay = await readSelectedEssay(slug);
+  if (essay) {
+    return <GhostEssay essay={essay} markdown={essay.markdown} />;
+  }
   const meta = getPostMeta(slug);
   if (!meta) notFound();
 
@@ -57,18 +66,6 @@ export default async function EssayPage({
 
   return (
     <>
-      <div className="top-fade" aria-hidden="true" />
-
-      <Link href="/" className="home-corner" aria-label="Home">
-        <Image
-          className="home-corner__img"
-          src="/profile.png"
-          alt="Home"
-          width={48}
-          height={48}
-        />
-      </Link>
-
       <main className="page essay-page">
         <header className="reveal">
           <h1 className="essay-title">{meta.title}</h1>

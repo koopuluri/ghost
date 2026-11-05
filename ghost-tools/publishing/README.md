@@ -37,7 +37,7 @@ Media is private backup, not public website hosting. Site-specific images remain
 
 ## site inputs and recovery
 
-The fingerprint includes tracked file paths, modes, and Git object IDs matching `site.inputs`. It currently covers `personal-site/**`. When the site reads an essay or shared dependency elsewhere in Ghost, add that input explicitly. Unrelated notes and browser events do not deploy the site. Losing `.ghost/published-site.json` causes one conservative deployment, not a false skip. Vercel environment changes require a deliberate redeploy; file fingerprints cannot detect remote settings.
+The fingerprint includes tracked file paths, modes, and Git object IDs matching `site.inputs`. It covers `personal-site/**` and the explicitly selected `expression/personal-stack.md`. When the site reads another essay or shared dependency elsewhere in Ghost, add that input explicitly. The site's content check verifies that each selected essay is included. Unrelated notes and browser events do not deploy the site. Losing `.ghost/published-site.json` causes one conservative deployment, not a false skip. Vercel environment changes require a deliberate redeploy; file fingerprints cannot detect remote settings.
 
 If an upload or push fails, keep the approved plan and fix the external cause. A retry verifies uploaded objects and reuses an already-created commit. If source files or Git history change, prepare and approve a new plan. If a deployment's outcome is ambiguous, inspect Vercel and reconcile the receipt before retrying. Logs never need to contain access keys.
 

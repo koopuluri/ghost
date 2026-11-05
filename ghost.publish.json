@@ -21,7 +21,8 @@
     "project": "karthikuppu.com",
     "scope": "homan-projects",
     "inputs": [
-      "personal-site/**"
+      "personal-site/**",
+      "expression/personal-stack.md"
     ],
     "expected_url": "https://www.koopuluri.com",
     "account": "homan",

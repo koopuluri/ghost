@@ -1,5 +1,8 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import matter from 'gray-matter';
+import { readFileSync, realpathSync, readdirSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 const archive = JSON.parse(readFileSync(new URL('../content/expressions.json', import.meta.url)));
 const intro = JSON.parse(readFileSync(new URL('../content/maipai.json', import.meta.url)));
 const ids = new Set();
@@ -34,3 +37,39 @@ for (const post of archive.posts) {
 for (const id of intro.groundedInPostIds) assert(ids.has(id), `intro source missing: ${id}`);
 for (const post of archive.excluded) assert(!ids.has(post.id), `excluded post included: ${post.id}`);
 console.log(`content checks passed: ${archive.posts.length} expressions; coverage ${archive.coverage.complete ? 'complete' : 'partial'}`);
+
+const selected = JSON.parse(readFileSync(new URL('../content/selected-essays.json', import.meta.url)));
+const profile = JSON.parse(readFileSync(new URL('../content/profile.json', import.meta.url)));
+const publishing = JSON.parse(readFileSync(new URL('../../ghost.publish.json', import.meta.url)));
+const expressionRoot = realpathSync(fileURLToPath(new URL('../../expression', import.meta.url)));
+const reservedSlugs = new Set([
+  ...readdirSync(new URL('../app/', import.meta.url), { withFileTypes: true })
+    .filter(entry => entry.isDirectory() && !entry.name.startsWith('['))
+    .map(entry => entry.name),
+  ...readdirSync(new URL('../posts/', import.meta.url)).map(name => name.replace(/\.mdx?$/, '')),
+  'personal-token', 'personal-manifesto',
+]);
+const slugs = new Set();
+const sources = new Set();
+for (const essay of selected) {
+  assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(essay.slug), `invalid essay slug: ${essay.slug}`);
+  assert(!slugs.has(essay.slug), `duplicate essay slug: ${essay.slug}`);
+  assert(!sources.has(essay.source), `duplicate essay source: ${essay.source}`);
+  slugs.add(essay.slug);
+  sources.add(essay.source);
+  assert(!reservedSlugs.has(essay.slug), `essay slug conflicts with an existing route: ${essay.slug}`);
+  assert(!Object.hasOwn(essay, 'title'), 'essay title belongs in Markdown frontmatter');
+  assert(essay.source.endsWith('.md'));
+  const sourcePath = realpathSync(path.resolve(expressionRoot, essay.source));
+  assert(sourcePath.startsWith(`${expressionRoot}${path.sep}`), 'essay source must remain inside expression/');
+  const { data, content } = matter(readFileSync(sourcePath, 'utf8'));
+  assert(typeof data.title === 'string' && data.title.trim(), `missing frontmatter title: ${essay.source}`);
+  assert(data.date === undefined || (typeof data.date === 'string' && data.date.trim()), `date must be a nonempty quoted string: ${essay.source}`);
+  assert(content.trim().length > 0, `empty essay: ${essay.source}`);
+  assert(publishing.site.inputs.includes(`expression/${essay.source}`), `add expression/${essay.source} to ghost.publish.json site.inputs`);
+}
+lowercase(profile.name);
+lowercase(profile.bio);
+assert(profile.name.trim() && profile.bio.trim());
+assert.equal(profile.xUrl, archive.profileUrl);
+console.log(`site checks passed: ${selected.length} selected essays; sources and publishing inputs verified`);

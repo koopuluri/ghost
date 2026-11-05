@@ -29,6 +29,7 @@ ghost/
 - i choose meaningful artifact versions. events reference the relevant version; recording and public release are separate.
 - tools and the personal site live inside ghost. their code, design, instructions, choices, and useful outputs are part of the collection.
 - site-specific copy belongs in personal-site; essays and other independent writing belong in expression. existing site essays remain in place until their migration is explicitly planned.
+- to publish an essay on the personal site, follow [the essay publication checklist](personal-site/README.md#when-asked-to-publish-an-essay). explicit selection controls both its root-level URL and homepage link; expression is not automatically exposed by the site.
 - publish ghost proposes a short, lowercase commit message first. confirming that message authorizes the prepared git, private asset, and conditional site publication. source control does not include credentials or application sessions.
 - media remains locally available and is backed up to private object storage through a tracked manifest. public site assets are explicitly included in personal-site/public; the site has no access to the private archive.
 

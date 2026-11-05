@@ -15,20 +15,25 @@
 --------------------------------------------------------------------------- */
 :root {
   --background: #fdfdfc; /* barely-warm white */
-  --ink: #1c1c1a; /* body text — slightly less than black, feels natural */
-  --ink-strong: #0b0b0a; /* titles / emphasis — near black */
-  --caption: #a6a6a1; /* dates, secondary — soft "caption" gray */
-  --hairline: #ebebe7; /* faint dividers */
+  --ink: #111;
+  --ink-strong: #111;
+  --caption: rgb(0 0 0 / 40%);
+  --hairline: #f2f2f2;
   --viz-bg: #fbfbfa; /* visualization panel — near page-white, defined by its edge */
   --viz-edge: #eeeeea; /* hairline that separates a viz panel from the page */
   --code-bg: #f5f5f2;
-  --accent: #4b4b46;
-  /* Landing-page links. */
-  --link: #2563eb;
-  --link-underline: color-mix(in srgb, var(--link) 32%, transparent);
-  --corner-size: 48px;
-  --corner-margin: 24px;
-  --top-fade-height: 112px;
+  --accent: rgb(0 0 0 / 60%);
+  /* Blue sampled from the user's ChatGPT link reference. */
+  --link: #35579f;
+  --link-hover: #24447f;
+  --font-size: 0.875rem;
+  --line-height: 1.25rem;
+  --letter-spacing: -0.00563rem;
+  /* benji.org: 582px outer column, 550px desktop content width. */
+  --page-width: 36.375rem;
+  --page-gutter: 1rem;
+  --page-top: 5rem;
+  --page-bottom: 2.5rem;
 }
 
 @theme inline {
@@ -41,9 +46,10 @@
 }
 
 /* ---------------------------------------------------------------------------
-   Base typography — Inter variable, weight 420, one size for everything
+   Base typography — measured from benji.org, one size for everything
 --------------------------------------------------------------------------- */
 html {
+  background: var(--background);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
@@ -51,13 +57,43 @@ html {
 }
 
 body {
+  overflow-y: scroll;
   background: var(--background);
   color: var(--ink);
-  font-size: 1rem; /* one size for the whole site — every single element */
-  font-weight: 435;
-  letter-spacing: -0.025em;
-  line-height: 1.5;
+  font-size: var(--font-size);
+  font-weight: 460;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
 }
+
+/* Match the reference's reserved 6px scrollbar so the column stays centered. */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: transparent; border-radius: 100px; }
+:hover::-webkit-scrollbar-thumb { background: rgb(0 0 0 / 15%); }
+::-webkit-scrollbar-thumb:hover { background: rgb(0 0 0 / 25%); }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 150ms ease;
+}
+a:visited { color: var(--link); }
+a:hover, a:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+small, code, pre, kbd, samp, sup, sub { font-size: inherit; }
+button, input, select, textarea { font: inherit; }
+strong, b { font-weight: 600; }
 
 /* Nothing is bigger than anything else: headings inherit the base size.
    Hierarchy comes only from weight and color. */
@@ -68,12 +104,13 @@ h4,
 h5,
 h6 {
   font-size: inherit;
-  font-weight: inherit;
+  font-weight: 500;
   line-height: inherit;
 }
 
 ::selection {
-  background: #ecece4;
+  color: var(--ink);
+  background: #ededed;
 }
 
 /* ---------------------------------------------------------------------------
@@ -82,14 +119,14 @@ h6 {
 .page {
   margin: 0 auto;
   width: 100%;
-  /* 550px text column + 1.5rem padding each side (box-sizing: border-box). */
-  max-width: 600px;
-  padding: 5rem 1.5rem;
+  max-width: var(--page-width);
+  padding: var(--page-top) var(--page-gutter) var(--page-bottom);
 }
 
-@media (min-width: 640px) {
-  .page {
-    padding: 7rem 1.5rem;
+@media (max-width: 768px) {
+  :root {
+    --page-gutter: 1.5rem;
+    --page-top: 2rem;
   }
 }
 
@@ -211,21 +248,19 @@ h6 {
 
 .landing__contact {
   color: var(--link);
-  text-decoration: underline;
-  text-decoration-color: var(--link-underline);
-  text-underline-offset: 2px;
-  transition: text-decoration-color 0.2s ease;
+  text-decoration: none;
 }
 
-.landing__contact:hover {
-  text-decoration-color: var(--link);
+.landing__contact:hover, .landing__contact:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 /* ---------------------------------------------------------------------------
    Essay page
 --------------------------------------------------------------------------- */
 .essay-title {
-  font-weight: 550;
+  font-weight: 500;
   color: var(--ink-strong);
 }
 
@@ -235,7 +270,7 @@ h6 {
 }
 
 .essay-article {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .essay-body {
@@ -243,33 +278,31 @@ h6 {
 }
 
 .essay-body > * + * {
-  margin-top: 1.15em;
+  margin-top: 1rem;
 }
 
 .essay-body h1,
 .essay-body h2,
 .essay-body h3,
 .essay-body h4 {
-  margin-top: 3em;
+  margin-top: 2.25rem;
   color: var(--ink-strong);
-  font-weight: 550;
+  font-weight: 560;
 }
 
 .essay-body strong {
   color: var(--ink-strong);
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .essay-body a {
   color: var(--link);
-  text-decoration: underline;
-  text-decoration-color: var(--link-underline);
-  text-underline-offset: 2px;
-  transition: text-decoration-color 0.2s ease;
+  text-decoration: none;
 }
 
-.essay-body a:hover {
-  text-decoration-color: var(--link);
+.essay-body a:hover, .essay-body a:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 .essay-body ul,
@@ -300,63 +333,11 @@ h6 {
   border-radius: 5px;
   background: var(--code-bg);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.9em;
+  font-size: inherit;
 }
 
 .essay-body hr {
   margin: 3.5rem 0;
   border: 0;
   border-top: 1px solid var(--hairline);
-}
-
-.top-fade {
-  position: fixed;
-  z-index: 40;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: var(--top-fade-height);
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    var(--background) 0%,
-    var(--background) 20%,
-    color-mix(in srgb, var(--background) 72%, transparent) 46%,
-    color-mix(in srgb, var(--background) 32%, transparent) 72%,
-    transparent 100%
-  );
-}
-
-.essay-page {
-  padding-top: calc(var(--top-fade-height) + 0.75rem);
-}
-
-@media (min-width: 640px) {
-  .essay-page {
-    padding-top: calc(var(--top-fade-height) + 2rem);
-  }
-}
-
-.home-corner {
-  position: fixed;
-  z-index: 50;
-  top: var(--corner-margin);
-  left: var(--corner-margin);
-  display: block;
-  width: var(--corner-size);
-  height: var(--corner-size);
-  border-radius: 9999px;
-}
-
-.home-corner__img {
-  display: block;
-  width: var(--corner-size);
-  height: var(--corner-size);
-  border-radius: 9999px;
-  object-fit: cover;
-  transition: transform 0.2s ease;
-}
-
-.home-corner:hover .home-corner__img {
-  transform: scale(1.05);
 }

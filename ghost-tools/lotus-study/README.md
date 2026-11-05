@@ -24,6 +24,8 @@ The lotus is lifted 2% of the frame height and shifted right approximately 0.522
 
 ## Symbol reveal
 
+The Symbols controls adjust icon weight (75–220% of the original 1.8-unit stroke) and row size (70–160% of the original 13%-wide row). The starting weight is 135%, with size kept at 100%. `stack-style.js` applies weight to the original SVG paths and uses the same SVG image for preview and video export. Both settings persist locally; adjusting weight leaves the row's size and center unchanged.
+
 The row is invisible until 2 seconds, then rises from zero to its full ivory/white color at 10 seconds. The default cubic ease-in puts most of the change near the end: 12.5% opacity at 6 seconds, 42.2% at 8 seconds, and 100% at 10 seconds. It holds full visibility until the video restarts. Fade starts, Full white, and Acceleration controls update live and are saved with the look. `stack-motion.js` provides the same media-time curve to preview and export, so scrubbing, pausing and playback-speed changes stay synchronized.
 
 ## Music

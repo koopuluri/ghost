@@ -12,14 +12,36 @@ Follow the root `AGENTS.md` authorship convention and `publish-ghost` skill for
 publication. Site-specific copy stays here; future independent writing belongs
 in Ghost's `expression/`. Preserve existing posts and source evidence in place.
 
-Read instructions.md, README.md, content/expressions.json and content/maipai.json before editing.
+Read instructions.md, README.md, content/profile.json and content/selected-essays.json before editing.
 Treat instructions.md as the persistent product and presentation preferences.
-The current product is one page: Maipai's short welcome, then title links to
-selected X expressions, newest first, without visible dates or timestamps. No topic
-headers, categories, cards, summaries, chatbot, personalization, live X
-integration, schedules, runtime AI or database.
+The current product has three top-level pages with icon-only navigation: personhood
+(`/`, the default), personal artificial intelligence (`/ai`), and personal stock
+(`/stock`). Use the original SVG geometry from `assets/manifesto-stack-icons.svg`.
+The homepage has karthik's photo, name, short bio, X link, divider and an explicitly
+selected list of essay titles. Only The Personal Stack is selected initially.
+Use `karthik uppuluri` as the full name and a 48px portrait above it. Match the
+measured benji.org typography/layout values in instructions.md: Inter, one 14px
+text size throughout, 20px line-height, subtle dividers and weight/color hierarchy.
+Links use the user's ChatGPT reference blue, with an underline only on hover/focus.
+Selection and display order live in `content/selected-essays.json`; source Markdown
+stays in Ghost's `expression/`. Never auto-publish the directory or rewrite essays.
+Keep their original capitalization, punctuation and π callouts. Add selected source
+paths to `ghost.publish.json` site.inputs. The deeper essay view has a home link;
+the three-icon navigation belongs to the top-level pages.
+When asked to publish an essay, follow README.md's "when asked to publish an essay"
+checklist. Keep URL availability and homepage inclusion coupled through the explicit
+selection list for now; the proposed public-by-default/draft-flag architecture was
+not adopted.
 
-## when the user says “update my site”
+For site changes, run `npm run check:content` and `npm run build`, and verify desktop
+and mobile layouts, keyboard navigation, the three active icons, and essay links.
+Keep the homepage, top-level pages and selected essays statically rendered.
+Preserve the historical X archive, Maipai copy and essay/video routes.
+
+## when explicitly asked to update the historical X archive
+
+This is no longer the homepage update workflow. Read `content/expressions.json`
+and `content/maipai.json` before working on that archive.
 
 1. Establish available browser control. Prefer a new Safari tab if supported;
    otherwise explain the available alternative. Inspect https://x.com/koopuluri
@@ -68,3 +90,22 @@ integration, schedules, runtime AI or database.
 The existing essay/video routes and their source are historical work, retained
 without homepage navigation. Do not delete or rewrite them as part of an archive
 update. Keep unrelated desktop and Expression iOS projects untouched.
+
+Essay URLs live at `/<slug>` (for example `/personal-stack`), and source filenames
+match their slugs. Preserve author-supplied essay title capitalization, including
+“The Personal Stack”. The original manifesto URLs redirect to `/personal-stack`.
+
+Essay titles and optional dates come from YAML frontmatter in the source Markdown,
+not the selection JSON. Preserve their capitalization; quote dates and display
+them verbatim below the essay title (same size, muted color). Keep homepage links
+title-only. Ordered list markers use `1)`, `2)`, etc. See README.md for the schema.
+
+Internal pages (essays and video pages) use the shared `InternalPage` layout.
+Its only navigation item is a fixed circular profile photo linking home (48px
+on desktop, 36px at widths up to 768px),
+24px from the desktop top/left edges. On mobile, align its left edge with the
+content column, including centered tablet columns. Show the white fade only
+when the photo horizontally overlaps the actual content column; measure that
+overlap on resize and route changes, rather than using a desktop/mobile cutoff.
+When the photo sits outside the content, the navbar background is transparent.
+Reserve space above the content; keep this navigation off `/`, `/ai` and `/stock`.

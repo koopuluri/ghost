@@ -1,0 +1,97 @@
+{
+  "schema": "ghost.video.v1",
+  "title": "lovebirds · quieter audio ceiling",
+  "parent": "18e5cfecbfdd8b105bed",
+  "canvas": {
+    "width": 2880,
+    "height": 2160,
+    "fps": 30,
+    "colorSpace": "hlg2020",
+    "fit": "cover"
+  },
+  "clips": [
+    {
+      "source": "IMG_0180.mov",
+      "sha256": "df1dc8b258d22a59211d23bbd6a5e09f0ae1c400e5a06859f6ccbe44abe826b1",
+      "startFrame": 0,
+      "frames": 242
+    },
+    {
+      "source": "IMG_0181.mov",
+      "sha256": "5098afea8b5788256f336b6d6c55c343e63026f03d658c9117ef136ccda99ed2",
+      "startFrame": 0,
+      "frames": 201
+    }
+  ],
+  "fadeInFrames": 90,
+  "fadeOutFrames": 30,
+  "titleCard": {
+    "text": "lovebirds",
+    "frames": 240,
+    "fadeInFrames": 90,
+    "fadeOutFrames": 90,
+    "font": "Baskerville",
+    "fontSize": 95.76
+  },
+  "audio": {
+    "source": "assets/lovebirds-music-44-64.wav",
+    "start": 0,
+    "duration": 20,
+    "fadeIn": 3,
+    "fadeOut": 3,
+    "sha256": "dc9de0b72a2db0e91b0e638dba3dfe0d1aa3ef31b2fe59f861925fc528a2f7ba",
+    "gainDB": -7.7
+  },
+  "notes": [
+    "Music lowered another 2 dB to fit the new −18 LUFS ceiling, with no boosting of quieter tracks. Total source attenuation: −7.7 dB.",
+    "4:3 crop, 65% lotus grain, and centered Baskerville at 4.4333% of frame height are now defaults for all videos. Existing artifact versions retain their saved settings."
+  ],
+  "provenance": {
+    "music": {
+      "url": "https://music.youtube.com/watch?v=dEfQekR1an0",
+      "title": "Whisky Story Time",
+      "original": "assets/lovebirds-music-source.webm",
+      "excerptSeconds": [
+        44,
+        64
+      ]
+    },
+    "grain": {
+      "source": "ghost-tools/lotus-study/look.js",
+      "sha256": "621fd7d09c24902d0ad76bd870bfd13fdfb8797c80f60fe01186a61077d40a27",
+      "selectedGrainPercent": 91,
+      "scope": "Grain formula only; no lotus color-pop grade. Same 1080-reference grain size and 24Hz cadence. Native HDR highlights remain unclipped."
+    },
+    "audioLevel": {
+      "referenceArtifact": "18e5cfecbfdd8b105bed",
+      "measuredIntegratedLUFS": -16.04,
+      "measuredTruePeakDBTP": -5.64,
+      "maximumIntegratedLUFS": -18,
+      "maximumTruePeakDBTP": -1.5,
+      "previousGainDB": -5.7,
+      "additionalGainDB": -2,
+      "gainDB": -7.7,
+      "method": "Attenuation only, preserving dynamics and fades; verify encoded output against both ceilings."
+    },
+    "defaults": {
+      "source": ".agents/skills/video-process/SKILL.md",
+      "sha256": "4aed106c71b4ef02a05da6aabe1948786e094877e0fe854fa862d12530b0dd4d"
+    }
+  },
+  "renderer": {
+    "source": "ghost-tools/video-process/engines/5fffd45b7de3bbb8bcb89f77787c7f8142d019ccece9c24fe90503fe8203fdbb.swift",
+    "sha256": "5fffd45b7de3bbb8bcb89f77787c7f8142d019ccece9c24fe90503fe8203fdbb"
+  },
+  "environment": {
+    "macOS": "27.0.1",
+    "architecture": "arm64"
+  },
+  "fadeInCurve": "smoothstep",
+  "grain": {
+    "model": "lotus-film-v1",
+    "amount": 0.65,
+    "fps": 24,
+    "referenceHeight": 1080
+  },
+  "id": "35a778168a72a19b0d04"
+}

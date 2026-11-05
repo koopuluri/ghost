@@ -1,0 +1,83 @@
+{
+  "schema": "ghost.video.v1",
+  "title": "lovebirds · softer grain",
+  "parent": "73111446bf937b55451a",
+  "canvas": {
+    "width": 2880,
+    "height": 2160,
+    "fps": 30,
+    "colorSpace": "hlg2020",
+    "fit": "cover"
+  },
+  "clips": [
+    {
+      "source": "IMG_0180.mov",
+      "sha256": "df1dc8b258d22a59211d23bbd6a5e09f0ae1c400e5a06859f6ccbe44abe826b1",
+      "startFrame": 0,
+      "frames": 242
+    },
+    {
+      "source": "IMG_0181.mov",
+      "sha256": "5098afea8b5788256f336b6d6c55c343e63026f03d658c9117ef136ccda99ed2",
+      "startFrame": 0,
+      "frames": 201
+    }
+  ],
+  "fadeInFrames": 90,
+  "fadeOutFrames": 30,
+  "titleCard": {
+    "text": "lovebirds",
+    "frames": 240,
+    "fadeInFrames": 90,
+    "fadeOutFrames": 90,
+    "font": "Baskerville",
+    "fontSize": 72
+  },
+  "audio": {
+    "source": "assets/lovebirds-music-44-64.wav",
+    "start": 0,
+    "duration": 20,
+    "fadeIn": 3,
+    "fadeOut": 3,
+    "sha256": "dc9de0b72a2db0e91b0e638dba3dfe0d1aa3ef31b2fe59f861925fc528a2f7ba"
+  },
+  "notes": [
+    "4:3 at 2880 × 2160, centered crop-to-fill with no letterboxing. This is now the default for future videos unless you specify otherwise.",
+    "Lotus film grain reduced by 42% from the previous cut: 91% → 52.78%. The same grain continues at 24Hz across the footage, fades, and entire title card.",
+    "Baskerville title at 72px (half the previous 144px). Opening video fade extended from 1s to 3s with a gentle eased curve; music fades in over 3s too.",
+    "Timing remains provisional: 22.77s total, including an 8s title card; the specified music excerpt ends at 20s."
+  ],
+  "provenance": {
+    "music": {
+      "url": "https://music.youtube.com/watch?v=dEfQekR1an0",
+      "title": "Whisky Story Time",
+      "original": "assets/lovebirds-music-source.webm",
+      "excerptSeconds": [
+        44,
+        64
+      ]
+    },
+    "grain": {
+      "source": "ghost-tools/lotus-study/look.js",
+      "sha256": "621fd7d09c24902d0ad76bd870bfd13fdfb8797c80f60fe01186a61077d40a27",
+      "selectedGrainPercent": 91,
+      "scope": "Grain formula only; no lotus color-pop grade. Same 1080-reference grain size and 24Hz cadence. Native HDR highlights remain unclipped."
+    }
+  },
+  "renderer": {
+    "source": "ghost-tools/video-process/engines/86bf146f2f16086cdaba9f63e87b97c56494d883a963461e480e270ec6c32830.swift",
+    "sha256": "86bf146f2f16086cdaba9f63e87b97c56494d883a963461e480e270ec6c32830"
+  },
+  "environment": {
+    "macOS": "27.0.1",
+    "architecture": "arm64"
+  },
+  "fadeInCurve": "smoothstep",
+  "grain": {
+    "model": "lotus-film-v1",
+    "amount": 0.5278,
+    "fps": 24,
+    "referenceHeight": 1080
+  },
+  "id": "1d8d5a897e40168b1261"
+}

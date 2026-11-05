@@ -4,28 +4,14 @@
   padding: 0;
   border-top: 1px solid var(--hairline);
 }
-
-.item {
-  margin: 0;
-  border-bottom: 1px solid var(--hairline);
-}
-
+.item { margin: 0; border-bottom: 1px solid var(--hairline); }
 .link {
   display: block;
-  padding: 0.9rem 0;
-  color: var(--ink);
-  font-weight: 480;
-  text-decoration: none;
-  transition: color 0.25s ease;
+  padding: 0.735rem 0;
+  color: var(--link);
+  font-weight: 460;
 }
-
-/* Spotlight: at rest every title is active (full ink). Hovering the list dims
-   the others to a soft gray, and the one under the cursor lifts to strong ink.
-   With nothing hovered, all stay active. */
-.list:hover .link {
-  color: #8f8f8a;
-}
-
-.list:hover .link:hover {
-  color: var(--ink-strong);
+.link:hover, .link:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
 }

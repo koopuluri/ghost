@@ -24,9 +24,9 @@ export default async function VideoPage({ params }: { params: Promise<Params> })
   if (!meta) notFound();
 
   return (
-    <main style={{ maxWidth: 720, margin: "0 auto", padding: "2.5rem 1.25rem" }}>
-      <Link href="/videos" style={{ color: "var(--caption)", fontSize: "0.85rem" }}>← Videos</Link>
-      <h1 style={{ fontSize: "1.4rem", margin: "0.75rem 0 1.5rem" }}>{meta.title}</h1>
+    <main style={{ maxWidth: "var(--internal-wide-width, 720px)", margin: "0 auto", padding: "var(--page-top) var(--page-gutter) 2.5rem" }}>
+      <Link href="/videos">← Videos</Link>
+      <h1 style={{ margin: "0.75rem 0 1.5rem" }}>{meta.title}</h1>
       <VideoInspector meta={meta} />
     </main>
   );

@@ -7,6 +7,8 @@ description: Save or update a faithful conversation transcript in Ghost's chats 
 
 Save original conversation messages as readable Markdown in `chats/`. Read `chats/README.md` and inspect an existing transcript for layout. Resolve Ghost's root from this skill's location (`../../..`), not an assumed working directory. Saving is separate from publishing or committing.
 
+A request to “save chat” invokes this skill even during a video workflow. Save the full original-message transcript in `chats/`; do not substitute a video process doc or its selective recorder. Process docs contain only selected creative discussion. Preserve their omissions and redactions while archiving the original conversation separately.
+
 ## Retrieve the source
 
 - Identify the intended conversation and any existing transcript by conversation ID when available. Do not confuse the current chat with a referenced chat. Use title and content to disambiguate when IDs are unavailable.

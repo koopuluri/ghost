@@ -28,6 +28,14 @@
           <button id="reset">Reset</button>
           <button id="export">Export video ↓</button>
         </div>
+        <fieldset class="fade-controls icon-controls">
+          <legend>The symbols</legend>
+          <div class="fade-grid icon-grid">
+            <label for="iconWeight"><span>Icon weight <output id="iconWeight-label">135%</output></span><input id="iconWeight" type="range" min="75" max="220" step="5" value="135"></label>
+            <label for="iconSize"><span>Icon size <output id="iconSize-label">100%</output></span><input id="iconSize" type="range" min="70" max="160" step="1" value="100"></label>
+          </div>
+          <p>100% matches the previous export. Weight changes the strokes; size changes the whole row.</p>
+        </fieldset>
         <fieldset class="fade-controls">
           <legend>The stack grows with you <output id="stack-visibility" aria-label="Stack visibility">0%</output></legend>
           <div class="fade-grid">

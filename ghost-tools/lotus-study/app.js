@@ -1,9 +1,12 @@
 import {createFilmLook} from './look.js';
 import {stackOpacity,normalizeFade} from './stack-motion.js';
 import {createMusic} from './music.js';
+import {createStackStyle} from './stack-style.js';
 const $=id=>document.getElementById(id);
 const video=$('lotus');
-const defaults={pop:84,grain:91,speed:1,fadeStart:2,fadeEnd:10,fadePower:3,musicVolume:100,musicFade:1.5};
+const defaults={pop:84,grain:91,speed:1,fadeStart:2,fadeEnd:10,fadePower:3,musicVolume:100,musicFade:1.5,iconWeight:135,iconSize:100};
+const stackStyle=createStackStyle($('stack-icons'));
+stackStyle.ready.catch(error=>{console.error(error);$('status').textContent=error.message;});
 const music=createMusic(video,$('music'),(status,cue)=>{
   $('music-status').textContent=status;
   $('music-cue').textContent=cue.toFixed(1)+' s';
@@ -18,6 +21,8 @@ try{
   for(const key of ['fadeStart','fadeEnd','fadePower'])if(Number.isFinite(saved[key]))settings[key]=saved[key];
   if(Number.isFinite(saved.musicVolume))settings.musicVolume=Math.min(100,Math.max(0,saved.musicVolume));
   if(Number.isFinite(saved.musicFade))settings.musicFade=Math.min(4,Math.max(0,saved.musicFade));
+  if(Number.isFinite(saved.iconWeight))settings.iconWeight=Math.min(220,Math.max(75,saved.iconWeight));
+  if(Number.isFinite(saved.iconSize))settings.iconSize=Math.min(160,Math.max(70,saved.iconSize));
   normalizeFade(settings);
 }catch{}
 function persist(){try{localStorage.setItem(storageKey,JSON.stringify(settings));}catch{}}
@@ -33,6 +38,10 @@ function apply(){
   $('musicVolume').value=settings.musicVolume;$('musicVolume-label').textContent=settings.musicVolume+'%';
   $('musicFade').value=settings.musicFade;$('musicFade-label').textContent=settings.musicFade.toFixed(1)+' s';
   music.set(settings);
+  for(const key of ['iconWeight','iconSize']){
+    $(key).value=settings[key];$(key+'-label').textContent=settings[key]+'%';
+  }
+  stackStyle.set(settings);
   syncStack();
 }
 function syncStack(){
@@ -60,6 +69,9 @@ $('colorPop').addEventListener('input',e=>{settings.pop=Number(e.target.value);a
 $('grain').addEventListener('input',e=>{settings.grain=Number(e.target.value);apply();persist();});
 $('speed').addEventListener('change',e=>{settings.speed=Number(e.target.value);apply();persist();});
 for(const key of ['musicVolume','musicFade'])$(key).addEventListener('input',e=>{
+  settings[key]=Number(e.target.value);apply();persist();
+});
+for(const key of ['iconWeight','iconSize'])$(key).addEventListener('input',e=>{
   settings[key]=Number(e.target.value);apply();persist();
 });
 $('music-play').addEventListener('click',async()=>{
@@ -98,6 +110,7 @@ $('export').addEventListener('click',async()=>{
     const mime=['video/mp4;codecs=avc1.640028,mp4a.40.2','video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/mp4'].find(type=>MediaRecorder.isTypeSupported(type));
     if(!mime)throw new Error('This browser cannot record the video.');
     // Composite the same SVG into exports, at the exact on-screen proportions.
+    await stackStyle.ready;
     await $('stack-icons').decode();
     const composite=document.createElement('canvas');composite.width=composite.height=1080;
     const ctx=composite.getContext('2d');

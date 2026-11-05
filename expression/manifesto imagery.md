@@ -30,32 +30,32 @@ an aside (not in this scene) - but there is a 3 symbol representation of personh
 ---
 
 references:
-![[Screenshot 2026-10-30 at 5.46.08 PM.png]]
+![[assets/Screenshot 2026-10-30 at 5.46.08 PM.png]]
 
 the super saiyan aura.
 
-![[Screenshot 2026-10-30 at 5.46.44 PM.png]]
+![[assets/Screenshot 2026-10-30 at 5.46.44 PM.png]]
 
 ^ another variant. this is the og one. i actually think this is better! let's lean toward this, but yea we can play with it.
-![[Screenshot 2026-10-30 at 5.48.15 PM.png]]
+![[assets/Screenshot 2026-10-30 at 5.48.15 PM.png]]
 
 ^ this is the kaiyoken
 
-![[Screenshot 2026-10-30 at 5.40.06 PM.png]]
+![[assets/Screenshot 2026-10-30 at 5.40.06 PM.png]]
 
 but yea you get the point though. the people lifting people up - but ofc this has many many layers, we don't need this many.
 
 and the statue look i want sort of resembles this:
 
-![[Screenshot 2026-10-30 at 5.41.45 PM.png]]![[Screenshot 2026-10-30 at 5.42.02 PM.png]]
+![[assets/Screenshot 2026-10-30 at 5.41.45 PM.png]]![[assets/Screenshot 2026-10-30 at 5.42.02 PM.png]]
 
 like you see the statue approach they took here for this movie. i really really vibe with the statue angle here and i want to try it out for this manifesto image.
 
-![[Screenshot 2026-10-31 at 5.18.25 PM.png]]
+![[assets/Screenshot 2026-10-31 at 5.18.25 PM.png]]
 
-^ ok this is something that lauri published recently on x. i looooove this visual. so powerful. the original he edited: ![[Screenshot 2026-10-31 at 5.19.19 PM.png]]
+^ ok this is something that lauri published recently on x. i looooove this visual. so powerful. the original he edited: ![[assets/Screenshot 2026-10-31 at 5.19.19 PM.png]]
 (from [unsplash: ](https://unsplash.com/photos/two-mythological-figures-with-helmets-and-staffs-mhIQCvc99eY)).
 
 maybe we can play with this effect too? maybe not. feels a bit diff from what we are going for, but i'm open to seeing if there's something in this style that also works for us?!
 
-[[Screenshot 2026-11-02 at 2.02.49 PM.png]]
+[[assets/Screenshot 2026-11-02 at 2.02.49 PM.png]]

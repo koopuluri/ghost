@@ -1,0 +1,9 @@
+{
+  "id": "ghost-video-process",
+  "name": "Ghost Video Process",
+  "version": "0.2.0",
+  "minAppVersion": "1.5.0",
+  "description": "Open immutable video artifacts in a native HDR player. Creative discussion is selected explicitly; full chat saves use the save-chat skill.",
+  "author": "Ghost",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "ghost.video.v1",
+  "title": "lovebirds · first cut",
+  "parent": null,
+  "canvas": {
+    "width": 3840,
+    "height": 2160,
+    "fps": 30,
+    "colorSpace": "hlg2020"
+  },
+  "clips": [
+    {
+      "source": "IMG_0180.mov",
+      "sha256": "df1dc8b258d22a59211d23bbd6a5e09f0ae1c400e5a06859f6ccbe44abe826b1",
+      "startFrame": 0,
+      "frames": 242
+    },
+    {
+      "source": "IMG_0181.mov",
+      "sha256": "5098afea8b5788256f336b6d6c55c343e63026f03d658c9117ef136ccda99ed2",
+      "startFrame": 0,
+      "frames": 201
+    }
+  ],
+  "fadeInFrames": 30,
+  "fadeOutFrames": 30,
+  "titleCard": {
+    "text": "lovebirds",
+    "frames": 240,
+    "fadeInFrames": 90,
+    "fadeOutFrames": 90,
+    "font": "HelveticaNeue",
+    "fontSize": 144
+  },
+  "audio": {
+    "source": "assets/lovebirds-music-44-64.wav",
+    "start": 0,
+    "duration": 20,
+    "fadeIn": 1,
+    "fadeOut": 3,
+    "sha256": "dc9de0b72a2db0e91b0e638dba3dfe0d1aa3ef31b2fe59f861925fc528a2f7ba"
+  },
+  "notes": [
+    "Provisional timing: 14.77 seconds of footage, then an 8-second title card (22.77 seconds total). The specified 44–64s music excerpt fades out at 20s, leaving the last 2.77s silent. We can resolve this timing in the next iteration.",
+    "Title fades in over the first 3s of its black card and fades out over the last 3s. Original camera audio is muted. The third clip is excluded."
+  ],
+  "provenance": {
+    "music": {
+      "url": "https://music.youtube.com/watch?v=dEfQekR1an0",
+      "title": "Whisky Story Time",
+      "original": "assets/lovebirds-music-source.webm",
+      "excerptSeconds": [
+        44,
+        64
+      ]
+    }
+  },
+  "renderer": {
+    "source": "ghost-tools/video-process/engines/4c43ea34e4628c92b9406556dabb8656f2653b8408587fbd508b691758b64e71.swift",
+    "sha256": "4c43ea34e4628c92b9406556dabb8656f2653b8408587fbd508b691758b64e71"
+  },
+  "environment": {
+    "macOS": "27.0.1",
+    "architecture": "arm64"
+  },
+  "id": "6ad47cb64358c166d662"
+}

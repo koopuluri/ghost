@@ -14,6 +14,21 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/essays/personal-manifesto",
+        destination: "/personal-stack",
+        permanent: true,
+      },
+      {
+        source: "/personal-manifesto",
+        destination: "/personal-stack",
+        permanent: true,
+      },
+      {
+        source: "/essays/:slug",
+        destination: "/:slug",
+        permanent: true,
+      },
+      {
         source: "/personal-token",
         destination:
           "https://x.com/koopuluri/status/2081196820936757550",

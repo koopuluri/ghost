@@ -21,3 +21,9 @@ When the user says "process notes" (or similar) about a document containing note
 When asked to publish Ghost, apply `.agents/skills/publish-ghost/SKILL.md`. Prepare the changes and propose a short, informal, lowercase commit message (one or two sentences). Wait for the user to confirm that exact message before committing, uploading assets, pushing Git, or deploying the site. Changed source or publication scope requires a fresh prepared plan.
 
 Ghost owns `personal-site/` and `ghost-tools/`. Site-specific copy belongs in the site; independent essays belong in `expression/`. The media archive is private. The user accepted R2 upload limits and billing alerts with the understanding that $20 is not a guaranteed hard cap.
+
+## Video workflows and defaults
+
+For every video, apply the organization, selective recording, and defaults in [.agents/skills/video-process/SKILL.md](.agents/skills/video-process/SKILL.md). That skill is the authoritative home for framing, grain, typography, and audio ceilings. Explicit user overrides take precedence; existing immutable artifacts retain their saved settings.
+
+“Save chat” means apply `.agents/skills/save-chat/SKILL.md` and save a full transcript in `chats/`. Video process docs in `expression/videos/` retain only video-relevant discussion; they are not the destination for full chat saves or workflow-maintenance discussions.
