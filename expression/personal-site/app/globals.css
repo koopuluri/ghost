@@ -1,0 +1,348 @@
+@import "tailwindcss";
+
+/* ===========================================================================
+   Site styles for the landing page and internal video tools.
+
+   This is the single file to tweak for page-level look & feel. Reusable
+   components own their own CSS:
+     - Essay list item → components/EssayList.module.css
+     - Video inspector → components/VideoInspector.module.css
+   Those components still read the shared design tokens defined below.
+=========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   Design tokens (shared palette — components reference these too)
+--------------------------------------------------------------------------- */
+:root {
+  --background: #fdfdfc; /* barely-warm white */
+  --ink: #111;
+  --ink-strong: #111;
+  --caption: rgb(0 0 0 / 40%);
+  --hairline: #f2f2f2;
+  --viz-bg: #fbfbfa; /* visualization panel — near page-white, defined by its edge */
+  --viz-edge: #eeeeea; /* hairline that separates a viz panel from the page */
+  --code-bg: #f5f5f2;
+  --accent: rgb(0 0 0 / 60%);
+  /* Blue sampled from the user's ChatGPT link reference. */
+  --link: #35579f;
+  --link-hover: #24447f;
+  --font-size: 0.875rem;
+  --line-height: 1.25rem;
+  --letter-spacing: -0.00563rem;
+  /* Shared rhythm, taken from the approved essay layout. */
+  --space-related: 1rem;
+  --space-section: calc(2 * var(--space-related));
+  --space-detail: calc(var(--space-related) / 2);
+  --space-media-edge: calc((var(--line-height) - 1cap) / 2);
+  /* benji.org: 582px outer column, 550px desktop content width. */
+  --page-width: 36.375rem;
+  --page-gutter: 1rem;
+  --page-top: 5rem;
+  --page-bottom: 2.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-ink: var(--ink);
+  --color-ink-strong: var(--ink-strong);
+  --color-caption: var(--caption);
+  --color-hairline: var(--hairline);
+  --font-sans: var(--font-sans);
+}
+
+/* ---------------------------------------------------------------------------
+   Base typography — measured from benji.org, one size for everything
+--------------------------------------------------------------------------- */
+html {
+  background: var(--background);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overflow-y: scroll;
+  background: var(--background);
+  color: var(--ink);
+  font-size: var(--font-size);
+  font-weight: 460;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+}
+
+/* Match the reference's reserved 6px scrollbar so the column stays centered. */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: transparent; border-radius: 100px; }
+:hover::-webkit-scrollbar-thumb { background: rgb(0 0 0 / 15%); }
+::-webkit-scrollbar-thumb:hover { background: rgb(0 0 0 / 25%); }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 150ms ease;
+}
+a:visited { color: var(--link); }
+a:hover, a:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+small, code, pre, kbd, samp, sup, sub { font-size: inherit; }
+button, input, select, textarea { font: inherit; }
+strong, b { font-weight: 600; }
+
+/* Nothing is bigger than anything else: headings inherit the base size.
+   Hierarchy comes only from weight and color. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 500;
+  line-height: inherit;
+}
+
+::selection {
+  color: var(--ink);
+  background: #ededed;
+}
+
+/* ---------------------------------------------------------------------------
+   Page shell — centered landing-page column
+--------------------------------------------------------------------------- */
+.page {
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--page-width);
+  padding: var(--page-top) var(--page-gutter) var(--page-bottom);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-gutter: 1.5rem;
+    --page-top: 2rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   "Cards being laid down" — subtle staggered entrance for page content.
+   Applied to a container; its direct children animate in one after another.
+--------------------------------------------------------------------------- */
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal > * {
+  opacity: 0;
+  animation: card-in 0.62s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.reveal > *:nth-child(1) {
+  animation-delay: 0.02s;
+}
+.reveal > *:nth-child(2) {
+  animation-delay: 0.09s;
+}
+.reveal > *:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.reveal > *:nth-child(4) {
+  animation-delay: 0.23s;
+}
+.reveal > *:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.reveal > *:nth-child(6) {
+  animation-delay: 0.37s;
+}
+.reveal > *:nth-child(7) {
+  animation-delay: 0.44s;
+}
+.reveal > *:nth-child(8) {
+  animation-delay: 0.51s;
+}
+.reveal > *:nth-child(9) {
+  animation-delay: 0.58s;
+}
+.reveal > *:nth-child(10) {
+  animation-delay: 0.65s;
+}
+.reveal > *:nth-child(n + 11) {
+  animation-delay: 0.72s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal > * {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Landing page
+--------------------------------------------------------------------------- */
+.landing {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.landing__photo {
+  width: 100%;
+  max-width: 100px;
+  aspect-ratio: 1 / 1; /* the box is always square... */
+}
+
+.landing__photo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%; /* ...so the inner fills a square, and 50% is a true circle */
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.landing__photo-inner img {
+  object-fit: cover;
+}
+
+.landing__name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.landing__name {
+  font-weight: 480;
+  color: var(--ink-strong);
+}
+
+.landing__divider {
+  width: 1px;
+  height: 1em;
+  background: var(--hairline);
+}
+
+.landing__x {
+  display: inline-flex;
+  align-items: center;
+  color: var(--caption);
+  transition: color 0.2s ease;
+}
+
+.landing__x:hover {
+  color: var(--ink-strong);
+}
+
+.landing__contact {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.landing__contact:hover, .landing__contact:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------------------
+   Essay page
+--------------------------------------------------------------------------- */
+.essay-title {
+  font-weight: 500;
+  color: var(--ink-strong);
+}
+
+.essay-date {
+  margin-top: 0.25rem;
+  color: var(--caption);
+}
+
+.essay-article {
+  margin-top: 1.5rem;
+}
+
+.essay-body {
+  color: var(--ink);
+}
+
+.essay-body > * + * {
+  margin-top: 1rem;
+}
+
+.essay-body h1,
+.essay-body h2,
+.essay-body h3,
+.essay-body h4 {
+  margin-top: 2.25rem;
+  color: var(--ink-strong);
+  font-weight: 560;
+}
+
+.essay-body strong {
+  color: var(--ink-strong);
+  font-weight: 600;
+}
+
+.essay-body a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.essay-body a:hover, .essay-body a:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.essay-body ul,
+.essay-body ol {
+  padding-left: 1.25em;
+}
+
+.essay-body ul {
+  list-style: disc;
+}
+
+.essay-body ol {
+  list-style: decimal;
+}
+
+.essay-body li + li {
+  margin-top: 0.4em;
+}
+
+.essay-body blockquote {
+  padding-left: 1em;
+  border-left: 2px solid var(--hairline);
+  color: var(--accent);
+}
+
+.essay-body code {
+  padding: 0.1em 0.35em;
+  border-radius: 5px;
+  background: var(--code-bg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: inherit;
+}
+
+.essay-body hr {
+  margin: 3.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--hairline);
+}

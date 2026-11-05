@@ -1,6 +1,17 @@
 # Ghost agent instructions
 
-Follow the architecture and authorship conventions in `README.md`. Reusable workflows belong in `.agents/skills/`.
+Ghost is the whole personal workspace. Keep its record useful for π now and later, and keep documentation concise.
+
+- `expression/`: things the user creates — essays, videos, the personal site, and eventually products.
+- `events/`: records captured as the user does things, including `events/chats/` and `events/browsing/`.
+- `ghost-tools/`: supporting helpers and services.
+
+Shared media stays in `assets/`; reusable workflows belong in `.agents/skills/`. Preserve source wording, authorship, annotations, and meaningful versions. Organization does not authorize rewriting; recording does not publish anything.
+
+Obsidian uses the Advanced Exclude plugin and `.obsidianignore` to show the workspace, excluding dependencies and generated site files. Keep Ghost as the vault root so media links and video previews work.
+
+For interface work, read and apply [DESIGN_GUIDELINES.md](DESIGN_GUIDELINES.md).
+Reuse the product's established visual rhythm across pages and components.
 
 ## π — personal artificial intelligence
 
@@ -20,10 +31,10 @@ When the user says "process notes" (or similar) about a document containing note
 
 When asked to publish Ghost, apply `.agents/skills/publish-ghost/SKILL.md`. Prepare the changes and propose a short, informal, lowercase commit message (one or two sentences). Wait for the user to confirm that exact message before committing, uploading assets, pushing Git, or deploying the site. Changed source or publication scope requires a fresh prepared plan.
 
-Ghost owns `personal-site/` and `ghost-tools/`. Site-specific copy belongs in the site; independent essays belong in `expression/`. The media archive is private. The user accepted R2 upload limits and billing alerts with the understanding that $20 is not a guaranteed hard cap.
+The personal site lives in `expression/personal-site/`; independent essays belong in `expression/essays/`. Only explicitly selected essays and public media appear on the site. The media archive is private. The user accepted R2 upload limits and billing alerts with the understanding that $20 is not a guaranteed hard cap.
 
 ## Video workflows and defaults
 
 For every video, apply the organization, selective recording, and defaults in [.agents/skills/video-process/SKILL.md](.agents/skills/video-process/SKILL.md). That skill is the authoritative home for framing, grain, typography, and audio ceilings. Explicit user overrides take precedence; existing immutable artifacts retain their saved settings.
 
-“Save chat” means apply `.agents/skills/save-chat/SKILL.md` and save a full transcript in `chats/`. Video process docs in `expression/videos/` retain only video-relevant discussion; they are not the destination for full chat saves or workflow-maintenance discussions.
+“Save chat” means apply `.agents/skills/save-chat/SKILL.md` and save a full transcript in `events/chats/`. Video process docs in `expression/videos/` retain only video-relevant discussion; they are not the destination for full chat saves or workflow-maintenance discussions.

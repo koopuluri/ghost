@@ -8,7 +8,7 @@ Enable **Ghost Video Process** in Obsidian → Settings → Community plugins. `
 
 An iframe cannot contain an AppKit view. This version deliberately uses a separate native preview window, as chosen in the process discussion. It plays compositions directly from their sources; no intermediate movie export, server, browser compositor, or site publishing is involved.
 
-The agent automatically handles selective capture on every turn while working on a video, including discussion that produces no new artifact. Everything that affects the video goes into its process document; unrelated discussion stays out. The user does not need to request capture or select messages. This judgment is part of the existing video-process skill, rather than an indiscriminate background copier. “Save chat” uses the separate save-chat skill and writes the full original conversation to `chats/`.
+The agent automatically handles selective capture on every turn while working on a video, including discussion that produces no new artifact. Everything that affects the video goes into its process document; unrelated discussion stays out. The user does not need to request capture or select messages. This judgment is part of the existing video-process skill, rather than an indiscriminate background copier. “Save chat” uses the separate save-chat skill and writes the full original conversation to `events/chats/`.
 
 ## Organize first
 
@@ -41,7 +41,7 @@ The checkpoint folds the conversation since the previous artifact under a one-li
 - Each `DOC.artifacts/ID.json` freezes the recipe, parent artifact, source SHA-256 fingerprints, renderer identity, and OS/architecture. The original assets are referenced once, never copied per iteration. Missing/changed sources fail visibly.
 - `engines/HASH.swift` freezes the exact rendering code once per engine revision. Old artifacts compile and run their archived renderer. `.ghost/video-process/` contains disposable binaries, draft recipes, locks, and test frames.
 - System frameworks and named system fonts are OS dependencies. The OS is recorded; this is not a promise of bit-identical output across future macOS/font changes. Assets remain local until included in Ghost's separate archive workflow.
-- The source chat still exists in its original provider/session storage. Redacting the process document does not delete that original. An explicit save-chat request archives that original conversation separately in `chats/`; it does not replay omissions into the process doc.
+- The source chat still exists in its original provider/session storage. Redacting the process document does not delete that original. An explicit save-chat request archives that original conversation separately in `events/chats/`; it does not replay omissions into the process doc.
 
 ## Current recipe
 

@@ -17,12 +17,12 @@ class PublicationTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         subprocess.run(['git', 'init', '-q', '-b', 'main', self.temp.name], check=True)
         (self.root / 'assets').mkdir()
-        (self.root / 'personal-site').mkdir()
+        (self.root / 'expression/personal-site').mkdir(parents=True)
         (self.root / '.gitignore').write_text('.ghost/\nassets/*\n!assets/manifest.json\n')
         self.config = {'assets': {'enabled': False, 'billing_policy': 'require_provider_hard_cap'},
-                       'site': {'inputs': ['personal-site/**']}}
+                       'site': {'inputs': ['expression/personal-site/**']}}
         p.write_json(self.root / 'ghost.publish.json', self.config)
-        (self.root / 'personal-site/index.js').write_text('hello')
+        (self.root / 'expression/personal-site/index.js').write_text('hello')
 
     def tearDown(self):
         self.temp.cleanup()
@@ -35,7 +35,7 @@ class PublicationTests(unittest.TestCase):
     def test_approval_is_bound_to_exact_source(self):
         plan = self.prepare()
         p.validate(self.root, plan)
-        (self.root / 'personal-site/index.js').write_text('changed')
+        (self.root / 'expression/personal-site/index.js').write_text('changed')
         with self.assertRaisesRegex(RuntimeError, 'files changed'):
             p.validate(self.root, plan)
 
@@ -55,11 +55,11 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(first['site_fingerprint'], second['site_fingerprint'])
 
     def test_declared_essay_inputs_trigger_deployment(self):
-        self.config['site']['inputs'].append('expression/essay.md')
+        self.config['site']['inputs'].append('expression/essays/essay.md')
         p.write_json(self.root / 'ghost.publish.json', self.config)
         first = self.prepare()
-        (self.root / 'expression').mkdir()
-        (self.root / 'expression/essay.md').write_text('essay')
+        (self.root / 'expression/essays').mkdir()
+        (self.root / 'expression/essays/essay.md').write_text('essay')
         second = self.prepare()
         self.assertNotEqual(first['site_fingerprint'], second['site_fingerprint'])
 

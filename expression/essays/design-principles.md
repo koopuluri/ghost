@@ -1,6 +1,6 @@
 ---
 title: Design principles
-date: November 2026
+date: "November 2026"
 ---
 1. **Natural**. It must feel obvious. A person experiencing it should feel that they would have come up with the same thing if they tried. Simple. Not special. Easy.
 2. **Fundamental**. It must strive toward the essence, the root, the source. Something from which many things can grow from.

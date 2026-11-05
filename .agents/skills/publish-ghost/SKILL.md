@@ -5,7 +5,7 @@ description: Publish Ghost's source, private media archive, and changed personal
 
 # publish ghost
 
-Ghost is the canonical collection, including `personal-site/` and `ghost-tools/`. Read `README.md` and `ghost-tools/publishing/README.md` from the Ghost root. Use `ghost-tools/publishing/publish.py` for deterministic preparation, upload, Git publication, and conditional Vercel deployment.
+Ghost is the canonical workspace, including `expression/personal-site/` and `ghost-tools/`. Read `README.md`, `AGENTS.md`, and `ghost-tools/publishing/README.md` from the Ghost root. Use `ghost-tools/publishing/publish.py` for deterministic preparation, upload, Git publication, and conditional Vercel deployment.
 
 ## prepare the release
 
@@ -27,7 +27,7 @@ Once the user confirms the prepared message, run the publisher with that exact p
 
 The private R2 policy includes local upload/request/storage limits and Cloudflare billing alerts. The user accepted that $20 is not a guaranteed hard cap. Do not describe alerts or local limits as a provider-enforced cap, expose the bucket, or raise limits to make a blocked run succeed without the user's agreement.
 
-The site deploys only when its declared inputs differ from the last successful deployment. When adding dependencies on `expression/` or shared tools, update `site.inputs` before preparing. Keep site-specific copy in the site and independent writing in `expression/`; do not migrate existing essays as a side effect of publication.
+The site deploys only when its declared inputs differ from the last successful deployment. When adding dependencies on essays or shared tools, update `site.inputs` before preparing. Keep site-specific copy in the site and independent essays in `expression/essays/`; do not migrate existing site essays as a side effect of publication.
 
 If a stage fails, report the actual partial state. Keep its receipt and plan; retry only after identifying the cause, with at most two retries for a transient provider failure. On an ambiguous deployment outcome, inspect the existing Vercel result before attempting another deployment. Never force-push, overwrite local edits during restore, delete old media, or rotate credentials as recovery shortcuts.
 

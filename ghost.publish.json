@@ -17,12 +17,14 @@
     "max_requests_per_run": 5000
   },
   "site": {
-    "directory": "personal-site",
+    "directory": "expression/personal-site",
     "project": "karthikuppu.com",
     "scope": "homan-projects",
     "inputs": [
-      "personal-site/**",
-      "expression/personal-stack.md"
+      "expression/personal-site/**",
+      "expression/essays/personal-artificial-intelligence.md",
+      "expression/essays/design-principles.md",
+      "expression/essays/personal-stack.md"
     ],
     "expected_url": "https://www.koopuluri.com",
     "account": "homan",

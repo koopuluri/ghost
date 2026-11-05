@@ -2,6 +2,7 @@
 title: Create for yourself
 date: November 2026
 ---
+
 outside of frontier labs, there will be shrinking room for people to create for others, as everyone will be able to just create for themselves with AI.
 
 this whole strategy of figuring out what to build by "talking to users" implies that you are a middleman between users and their desires being fulfilled.
@@ -16,7 +17,7 @@ therefore, the greatest creators of value will increasingly look like artists ra
 
 i think the greatest creations stem from such indulgent selfishness.
 
-the wachowski's didn't make the matrix by asking people what they wanted. vyas didn't sit in a cave to write one of the greatest epics after discussing it with the village. the buddha didn't uncover the path to ultimate peace because he wanted to save the world – he wanted to end his suffering and liberate himself first and foremost. einstein didn't obsessively study the nature of light so that he could
+the wachowski's didn't make the matrix by asking people what they wanted. vyas didn't sit in a cave to write one of the greatest epics after discussing it with the village. the buddha didn't uncover the path to ultimate peace because he wanted to save the world – he wanted to end his suffering and liberate himself first and foremost. einstein didn't obsessively study the nature of light so that he could
 
 the fact that many others benefitted from their work was a byproduct.
 

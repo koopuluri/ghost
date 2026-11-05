@@ -1,6 +1,6 @@
 # ghost tools
 
-Software that collects, uses, and publishes [Ghost](../README.md). Source code belongs inside Ghost alongside the records it works with.
+Supporting helpers and services for working in [Ghost](../README.md).
 
 - [browser](browser/README.md): macOS browser and selected browsing capture.
 - [video-process](video-process/README.md): prompt-driven process documents and versioned native HDR video previews.

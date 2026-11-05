@@ -5,25 +5,21 @@ description: Organize Ghost's repository to match its documented structure, movi
 
 # Organize Ghost
 
-Resolve Ghost's root from this skill's location (`../../..`). Read the root `README.md` and `AGENTS.md`, then the instructions and READMEs relevant to the files being moved. Organization changes placement and references, not authorship or wording.
+Resolve Ghost's root from this skill's location (`../../..`). Read the mission in `README.md`, the structure in `AGENTS.md`, and instructions relevant to the files being moved. Organization changes placement and references, not authorship or wording.
 
 ## Find the right homes
 
 Inspect the working tree, including untracked root-level files, and identify misplaced artifacts by their contents and purpose rather than extension alone. Use the existing structure:
 
-- `assets/`: loose images, audio, video, and other shared media.
-- `expression/`: personal writing, thoughts, decisions, and creative expressions, including notes left at the repository root. Use the existing singular name, not `expressions/`.
-- `chats/`: conversation transcripts; preserve their source records and metadata.
-- `taste/`: deliberate captures and reflections.
-- `events/`: timestamped observations, with browsing events in `events/browsing/`.
-- `ai/`: generated work, under an appropriate existing function directory when available.
+- `expression/`: everything the user creates. Essays go in `expression/essays/`, video process docs in `expression/videos/`, and the site in `expression/personal-site/`. Loose notes can stay directly in `expression/`; create future categories such as products only when needed.
+- `events/`: records captured as the user does things. Conversations go in `events/chats/`, browsing captures in `events/browsing/`; preserve their source records and metadata.
+- `ghost-tools/`: supporting helpers and services.
+- `assets/`: shared images, audio, video, and other media.
 - `.agents/skills/`: reusable agent workflows.
-- `ghost-tools/`: applications and supporting implementation.
-- `personal-site/`: site implementation, design, and site-specific copy.
 
 Prefer existing destinations. Create a directory only when actual material warrants it, with a concise README explaining its role. Keep root orientation files, repository configuration, and files required at their current paths in place. Leave application state, credentials, dependencies, and build outputs in their established locations; cleanup is not deletion or a code refactor.
 
-Keep application-owned resources with their application, including explicitly public assets in `personal-site/public/`. Do not sweep every media file into the private archive or migrate existing site essays as incidental cleanup. If a destination is ambiguous, complete the clear moves and report the remaining items for clarification.
+Keep application-owned resources with their application, including explicitly public assets in `expression/personal-site/public/`. Do not sweep every media file into the private archive or migrate existing site essays as incidental cleanup. If a destination is ambiguous, complete the clear moves and report the remaining items for clarification.
 
 ## Move without losing context
 

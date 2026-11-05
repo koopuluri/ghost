@@ -357,6 +357,11 @@
       "bytes": 67399,
       "key": "sha256/136585645abc1bbdcd21da8d8daae6cf31488ee26a2571d38650fde7ec5c81df"
     },
+    "assets/Screenshot 2026-11-05 at 11.30.20 AM.png": {
+      "sha256": "d1fd0e87eee121af1c4659654f0b3597b13d0af88463c397cbb636999ff9ef73",
+      "bytes": 39537,
+      "key": "sha256/d1fd0e87eee121af1c4659654f0b3597b13d0af88463c397cbb636999ff9ef73"
+    },
     "assets/ghost-internal-navbar-mobile.jpg": {
       "sha256": "7d8aef2998c266d2ff67cddd031c4a1a6fb402135899b7b75f9199666b5334ec",
       "bytes": 48736,
