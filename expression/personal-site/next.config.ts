@@ -14,6 +14,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/ai",
+        destination: "/π",
+        permanent: true,
+      },
+      {
+        source: "/stock",
+        destination: "/$",
+        permanent: true,
+      },
+      {
         source: "/essays/personal-manifesto",
         destination: "/personal-stack",
         permanent: true,

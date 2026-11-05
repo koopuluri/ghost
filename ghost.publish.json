@@ -22,7 +22,6 @@
     "scope": "homan-projects",
     "inputs": [
       "expression/personal-site/**",
-      "expression/essays/personal-artificial-intelligence.md",
       "expression/essays/design-principles.md",
       "expression/essays/personal-stack.md"
     ],

@@ -7,8 +7,9 @@ source; the private `koopuluri/karthikuppu.com` repository is the preserved impo
 
 - `/`: personhood (heart), with the section heading `expressions` and selected
   essays as plain title links.
-- `/ai`: personal artificial intelligence (π), with a placeholder paragraph.
-- `/stock`: personal stock ($), with a placeholder paragraph.
+- `/π`: heading `personal artificial intelligence`, browser tab `π`, with `(under construction).`
+- `/$`: heading `personal stock`, browser tab `$`, with the launch paragraph and links to the agreement and X.
+- `/ai` and `/stock`: permanent redirects to `/π` and `/$` respectively.
 - `/personal-stack`: The Personal Stack, matching the published X thread, with a link home.
 
 The three top-level pages share a centered 48px profile photo above
@@ -16,6 +17,8 @@ The three top-level pages share a centered 48px profile photo above
 profile, then three equal-width icon navigation segments, then a second divider
 and the section content. The header scrolls with the page. A subtle background slides across the three segments; active icons are darker,
 inactive icons are faded, and every icon uses the same 2.2 stroke width, and there is no underline. Icons are 18px.
+The AI and stock paragraphs reuse `GhostEssay.module.css` body styles, matching
+essay typography, paragraph spacing and links beneath the shared banner.
 The shared `app/(main)/layout.tsx` keeps the navigation mounted across section
 changes, and the animation respects reduced motion. The icons retain the paths from `../../assets/manifesto-stack-icons.svg`, adapted to inherit
 the navigation's stroke weight and color in `components/StackIcon.tsx`.
@@ -29,16 +32,29 @@ with an 8px gap; the header keeps
 a 3rem (48px) gap to the body. Shared values are in `app/globals.css`.
 Spacing follows the approved essay rhythm: 16px within groups and 32px between
 groups, applied through shared tokens on the top-level pages and essays. Read
-[Ghost design guidelines](../../DESIGN_GUIDELINES.md) before interface changes.
+[Ghost design guidelines](DESIGN_GUIDELINES.md) before interface changes.
 Links use the blue sampled from the user's ChatGPT screenshot and underline on
 hover/focus. See `instructions.md` for the complete persistent design decisions.
+
+## social previews
+
+Open Graph and X large-image cards share statically generated 1200 × 630 PNGs.
+The homepage has only the centered portrait. Section and essay previews use a
+small portrait at the top left, with the actual navigation icon or an 84px Inter
+essay title centered. Long titles wrap within a 960px column, with the entire
+block centered. `lib/social-image.tsx` owns the composition; `lib/social-metadata.ts`
+keeps titles, URLs, dimensions and image alternatives consistent for both platforms.
+`app/social/[image]/route.ts` generates only the three top-level previews and
+explicitly selected or preserved historical essays. Titles come from their source
+frontmatter, and all rendering assets are local. See `fonts/README.md` for Inter.
 
 ## content from Ghost
 
 `content/profile.json` holds the name, X URL and bio used in metadata.
 `content/selected-essays.json` is the explicit essay selection and display order,
-newest first and oldest last. The current order is Personal Artificial Intelligence,
-Design principles, then The Personal Stack. Each entry has this form:
+newest first and oldest last. The current order is Design principles, then
+The Personal Stack. The empty Personal Artificial Intelligence essay is deselected
+for now, with its source preserved in Ghost. Each entry has this form:
 
 ```json
 {
@@ -180,4 +196,4 @@ content column, including centered tablet columns. Show the white fade only
 when the photo horizontally overlaps the actual content column; measure that
 overlap on resize and route changes, rather than using a desktop/mobile cutoff.
 When the photo sits outside the content, the navbar background is transparent.
-Reserve space above the content; keep this navigation off `/`, `/ai` and `/stock`.
+Reserve space above the content; keep this navigation off `/`, `/π` and `/$`.

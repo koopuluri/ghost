@@ -2,7 +2,7 @@
 
 These are persistent user decisions. Keep this file and AGENTS.md current when
 Karthik changes a preference; do not ask him to repeat recorded decisions.
-Apply [Ghost design guidelines](../../DESIGN_GUIDELINES.md). The approved essay
+Apply [Ghost design guidelines](DESIGN_GUIDELINES.md). The approved essay
 page is the spacing reference for the whole site.
 
 ## structure
@@ -10,8 +10,13 @@ page is the spacing reference for the whole site.
 Three top-level pages share a centered profile header, then a divider, an icon-only
 segmented navigation row, another divider, and the selected section content:
 - heart: personhood, the default homepage at `/`; section title: `expressions` (browser title remains `karthik uppuluri`).
-- π: `/ai`; title: `personal artificial intelligence`.
-- $: `/stock`; title: `personal stock`.
+- π: `/π`; visible heading: `personal artificial intelligence`; browser title: `π`.
+  Redirect the old `/ai` URL.
+- $: `/$`; visible heading: `personal stock`; browser title: `$`.
+  Redirect the old `/stock` URL.
+
+The `/π` route uses the percent-encoded folder `app/(main)/%CF%80/` so Next.js
+matches browser-encoded requests. Keep the visible URL and canonical path `/π`.
 
 No visible category labels in the navigation. Reuse the coordinated
 SVG geometry from Ghost's `assets/manifesto-stack-icons.svg`, including symmetrical π.
@@ -28,10 +33,15 @@ The heart section has the heading `expressions`, followed by a plain list of
 selected essay titles. No dates, captions, summaries or cards.
 
 Karthik explicitly chooses what appears. Selection and ordering live in
-`content/selected-essays.json`. Initially only The Personal Stack is selected.
+`content/selected-essays.json`. The current selection is Design principles, then
+The Personal Stack. Keep the empty Personal Artificial Intelligence essay
+deselected for now, preserving its source in Ghost.
 Essay text comes directly from Ghost's `expression/` directory; never duplicate
-or rewrite it in the site. The AI and stock pages have placeholder paragraphs
-for now. Preserve the former X archive and historical routes as source evidence.
+or rewrite it in the site. The AI page says `(under construction).` The stock page
+uses Karthik's supplied launch paragraph, linking the personal-stock agreement and
+his X profile. Preserve its supplied capitalization. Both pages use the exact
+essay body styles beneath their section headings and the shared profile/navigation
+banner. Preserve the former X archive and historical routes as source evidence.
 
 ## writing and appearance
 
@@ -83,6 +93,22 @@ navigation scroll with the page.
 
 No chatbot, personalization, live X integration, runtime AI, database or schedule.
 
+## social previews
+
+Use the same 1200 × 630 warm-white canvas for Open Graph and X large-image cards.
+The homepage preview contains only a centered circular portrait (192px).
+Every other preview has a small circular portrait at the top left (96px, inset
+48px). The `/π` and `/$` previews center the actual navigation SVG icons (160px),
+never font-rendered characters. Essay previews center the exact frontmatter title
+in 84px Inter 500 with the site's proportional tracking and line-height, without
+a date or extra copy. Allow titles to wrap within the centered 960px text column;
+center the whole multiline block vertically. Their on-page Georgia headings stay
+as specified above.
+
+Generate images statically from the current profile, shared icon component and
+explicitly selected essay titles; retain previews for historical posts. Use local
+Inter from `fonts/` so previews render without runtime font requests.
+
 ## publishing
 
 Use Ghost's publish workflow. Prepare and show the exact short, lowercase commit
@@ -129,4 +155,4 @@ The overlapping treatment should feel like fading mist, never a rectangular bar:
 use a continuous 144px feathered mask with gentle backdrop blur, no solid plateau
 or hard bottom edge. Keep the photo sharp above that layer. Show the mist only
 after scrolling so the initial essay title stays clear.
-Reserve space above the content; keep this navigation off `/`, `/ai` and `/stock`.
+Reserve space above the content; keep this navigation off `/`, `/π` and `/$`.

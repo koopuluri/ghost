@@ -1,18 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useSelectedLayoutSegment } from "next/navigation";
 import { StackIcon, type Section } from "./StackIcon";
 import styles from "./SiteShell.module.css";
 
 const sections: { id: Section; href: string; label: string }[] = [
   { id: "personhood", href: "/", label: "personhood" },
-  { id: "ai", href: "/ai", label: "personal artificial intelligence" },
-  { id: "stock", href: "/stock", label: "personal stock" },
+  { id: "ai", href: "/π", label: "personal artificial intelligence" },
+  { id: "stock", href: "/$", label: "personal stock" },
 ];
 
 export function SectionNavigation() {
-  const pathname = usePathname();
+  const segment = useSelectedLayoutSegment();
+  const pathname = `/${decodeURIComponent(segment ?? "")}`;
   const activeIndex = Math.max(0, sections.findIndex(({ href }) => href === pathname));
 
   return (

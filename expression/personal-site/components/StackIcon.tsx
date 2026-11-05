@@ -8,17 +8,22 @@ const paths = {
 
 export type Section = keyof typeof paths;
 
-export function StackIcon({ section }: { section: Section }) {
+export function StackIcon({ section, size = 18, stroke = "currentColor", strokeWidth = 1.8 }: {
+  section: Section;
+  size?: number;
+  stroke?: string;
+  strokeWidth?: number;
+}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width="18"
-      height="18"
+      width={size}
+      height={size}
       fill="none"
-      stroke="currentColor"
+      stroke={stroke}
       strokeOpacity=".96"
-      strokeWidth="1.8"
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"

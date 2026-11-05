@@ -13,12 +13,14 @@ publication. Site-specific copy stays here; future independent writing belongs
 in Ghost's `expression/essays/`. Preserve existing posts and source evidence in place.
 
 Read instructions.md, README.md, content/profile.json and content/selected-essays.json before editing.
-Apply [Ghost design guidelines](../../DESIGN_GUIDELINES.md). Use the approved essay
+Apply [Ghost design guidelines](DESIGN_GUIDELINES.md). Use the approved essay
 page as the site-wide spacing reference, with shared tokens in app/globals.css.
 Treat instructions.md as the persistent product and presentation preferences.
 The current product has three top-level pages with icon-only navigation: personhood
-(`/`, the default), personal artificial intelligence (`/ai`), and personal stock
-(`/stock`). Use the original SVG geometry from `assets/manifesto-stack-icons.svg`, at 18px.
+(`/`, the default), personal artificial intelligence (`/π`), and personal stock
+(`/$`). Their browser titles are exactly `π` and `$`; visible headings remain
+`personal artificial intelligence` and `personal stock`.
+Permanently redirect `/ai` and `/stock` to those symbol URLs. Use the original SVG geometry from `assets/manifesto-stack-icons.svg`, at 18px.
 The active third has a sliding background; all icons use the same 2.2 stroke
 width, with dark active and faded inactive colors and no underline. Keep the shared layout
 mounted across section navigation and respect reduced motion.
@@ -26,14 +28,25 @@ All three top-level pages share a centered 48px portrait above
 `karthik uppuluri (x)`, with x opening the X profile in a new tab and no visible bio. Below
 the profile: a divider, three equal-width icon navigation segments, a divider,
 then the section content. The heart section is titled `expressions` above the
-explicitly selected essay titles. Keep the selection newest first and oldest last;
-currently Personal Artificial Intelligence, Design principles, then The Personal Stack. Match the
+explicitly selected essay titles. The AI and stock paragraphs reuse the exact
+essay body styles beneath the shared banner. Keep the supplied stock copy's
+capitalization and agreement/X links; AI says `(under construction).` Keep the
+selection newest first and oldest last; currently Design principles, then
+The Personal Stack. The empty Personal Artificial Intelligence essay is deselected
+for now; preserve its source. Match the
 measured benji.org typography/layout values in instructions.md: Inter, one 14px
 body text size, 20px line-height, subtle dividers and weight/color hierarchy.
 Essay headers are the exception: centered Georgia titles, 32px on desktop and
 28px at widths up to 768px, below
 the unchanged 14px muted date, separated by the shared 8px detail gap. Browser
 tabs show only the essay title. Leave 3rem (48px) between the essay header and body.
+Social previews use a shared 1200 × 630 warm-white canvas: homepage has only the
+centered portrait; other pages have a 96px portrait at the top left, inset 48px.
+Center the actual shared SVG icon for `/π` and `/$`, and the exact essay title
+in 84px Inter 500 for essays, allowing centered multiline wrapping in a 960px
+column. Use local Inter in `fonts/`; generate images statically
+through `app/social/[image]/route.ts`. Open Graph and X metadata must describe
+the current page and use its corresponding preview. See instructions.md.
 Links use the user's ChatGPT reference blue, with an underline only on hover/focus.
 Selection and display order live in `content/selected-essays.json`; source Markdown
 stays in Ghost's `expression/`. Never auto-publish the directory or rewrite essays.
@@ -120,4 +133,4 @@ content column, including centered tablet columns. Show the white fade only
 when the photo horizontally overlaps the actual content column; measure that
 overlap on resize and route changes, rather than using a desktop/mobile cutoff.
 When the photo sits outside the content, the navbar background is transparent.
-Reserve space above the content; keep this navigation off `/`, `/ai` and `/stock`.
+Reserve space above the content; keep this navigation off `/`, `/π` and `/$`.

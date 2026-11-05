@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { formatDate, getPostMeta, getPostSlugs } from "@/lib/posts";
-import { site } from "@/lib/site";
+import { socialMetadata } from "@/lib/social-metadata";
 
 import GhostEssay from "@/components/GhostEssay";
 import { EssayHeading } from "@/components/EssayHeading";
@@ -24,29 +24,25 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const essay = await readSelectedEssay(slug);
-  if (essay) return { title: { absolute: essay.title }, alternates: { canonical: `/${slug}` } };
+  if (essay) return {
+    title: { absolute: essay.title },
+    alternates: { canonical: `/${slug}` },
+    ...socialMetadata({ title: essay.title, path: `/${slug}`, image: `essay-${slug}`, type: "article" }),
+  };
   const meta = getPostMeta(slug);
   if (!meta) return {};
 
-  const images = [{ ...site.ogImage, alt: site.name }];
   return {
     title: { absolute: meta.title },
     description: meta.description,
-    openGraph: {
+    ...socialMetadata({
+      title: meta.title,
+      path: `/${slug}`,
+      image: `essay-${slug}`,
+      description: meta.description,
       type: "article",
-      siteName: site.name,
-      title: meta.title,
-      description: meta.description,
-      url: `${site.url}/${slug}`,
       publishedTime: meta.date || undefined,
-      images,
-    },
-    twitter: {
-      card: "summary",
-      title: meta.title,
-      description: meta.description,
-      images,
-    },
+    }),
   };
 }
 

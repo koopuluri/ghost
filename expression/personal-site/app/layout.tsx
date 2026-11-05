@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
+import { socialMetadata } from "@/lib/social-metadata";
 
 // The same variable Inter font used by benji.org. Global CSS sets the measured
 // 14px / 20px typography, with weight 460 for body text and 500 for page titles.
@@ -25,21 +26,7 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description: site.description,
-  openGraph: {
-    type: "website",
-    siteName: site.name,
-    title: site.name,
-    description: site.description,
-    url: site.url,
-    images: [{ ...site.ogImage, alt: site.name }],
-  },
-  twitter: {
-    card: "summary",
-    title: site.name,
-    description: site.description,
-    images: [{ ...site.ogImage, alt: site.name }],
-    ...(site.twitter ? { creator: site.twitter } : {}),
-  },
+  ...socialMetadata({ title: site.name, path: "/", image: "home" }),
 };
 
 export default function RootLayout({
